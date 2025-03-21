@@ -1,0 +1,52 @@
+[
+  {
+    "title": "News 1",
+    "content": "<b>Detailed</b> content for News 1. Stay updated with the latest trends. What more can I say?<br><br>",
+    "fullnews": "This is the full content for News 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. rrrrrrjjgjgjelkdnerifo3r3or23fnfngikn4ifn  4kfnignw4ifnwnfwfikjffeknfkenfefnejfnenjkfnjfnrfejfkjFNJKEFNJKFNKJFjkfkjsFjkwfbkFBkfbsKFJBSKJFBsjkfbjFBfbJBfjkbsfJsbfjbjbjFBjbdjvdbsvjsdbvjsdbvjdbvjdsvb fhehKFLFJhfkjFHkjhfHRUIHGUHwiueihguiwEHGiuwgbgjWEJFbjfnWE;FBwe;f fwENFFJ GERNGEBG HERG GRUGERIHGE  [weifnfaj",
+    "image": "assets/img/cl4.PNG",
+    "link": "https://aidoko.com.ng/news1"
+  },
+
+
+
+  
+  {
+    "title": "News 2",
+    "content": "Detailed content for News 2. Learn about the latest in technology.",
+    "fullnews": "This is the full content for News 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.",
+    "image": "assets/img/cli1.png",
+    "link": "https://aidoko.com.ng/news2"
+  },
+
+
+
+
+  {
+    "title": "News 3",
+    "content": "Detailed content for News 3. Explore design and animation updates.",
+    "fullnews": "This is the full content for News 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.",
+    "image": "assets/img/cl4.PNG",
+    "link": "https://aidoko.com.ng/news3"
+  },
+
+
+
+
+  {
+    "title": "News 4",
+    "content": "Detailed content for News 4. Discover insights on climate change.",
+    "fullnews": "This is the full content for News 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.",
+    "image": "assets/img/fish.png",
+    "link": "https://aidoko.com.ng/news4"
+  },
+
+
+  
+  {
+    "title": "News 4",
+    "content": "Detailed. Discover insights on climate change.",
+    "fullnews": "This is the full content for News 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.",
+    "image": "assets/img/fish.png",
+    "link": "https://aidoko.com.ng/news4"
+  }
+]
