@@ -113,9 +113,8 @@
                     </div>
 
                     <div id="news-content">
-                        <p>Loading content...    hello</p>
+                        <p id="news-paragraph">Loading content...</p>
                     </div>
-                    <button id="read-fullnews-btn" class="button">Read Full News</button>
                     
 
                 </div>
@@ -123,26 +122,10 @@
             </div>
         </section>
 
-        <!-- Full-Screen Modal -->
-        <div id="fullnews-modal" class="modal">
-          <div class="modal-content">
-            <span class="modal-close">&times;</span>
-            <h2 id="modal-news-title">Full News</h2>
-            <div id="modal-news-content" class="modal-scrollable">
-              Loading full content...
-            </div>
-            <button class="modal-close-btn">Close</button>
-            <div class="modal-comments">
-              <h3>Comments</h3>
-              <textarea id="comment-input" placeholder="Write your comment here..." rows="4"></textarea>
-              <button id="submit-comment" class="button">Submit Comment</button>
-              <ul id="comments-section">
-                <li>No comments yet. Be the first to comment!</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
+        <section class="news-pagination section bd-container">
+            <h2>More News</h2>
+            <div id="news-pagination" class="pagination-container"></div>
+        </section>
        
        
       
@@ -277,182 +260,55 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Get the news ID from the URL query string
             const urlParams = new URLSearchParams(window.location.search);
-            const newsId = urlParams.get('id');
+            const currentNewsId = urlParams.get('id');
 
-            if (!newsId) {
+            if (!currentNewsId) {
                 document.getElementById('news-title').textContent = 'News Not Found';
-                document.getElementById('news-content').innerHTML = '<p>Invalid news ID.</p>';
+                document.getElementById('news-paragraph').innerHTML = '<p>Invalid news ID.</p>';
                 return;
             }
 
-            // Fetch the news data from the JSON file
             fetch('assets/data/news.json')
                 .then(response => response.json())
                 .then(newsDetails => {
-                    const news = newsDetails[newsId];
-                    if (!news) {
+                    const currentNews = newsDetails[currentNewsId];
+                    if (!currentNews) {
                         document.getElementById('news-title').textContent = 'News Not Found';
-                        document.getElementById('news-content').innerHTML = '<p>Invalid news ID.</p>';
+                        document.getElementById('news-paragraph').innerHTML = '<p>Invalid news ID.</p>';
                         return;
                     }
 
-                    // Populate the page with the news data
-                    document.getElementById('news-title').textContent = news.title;
-                    document.getElementById('news-content').innerHTML = news.content;
-                    document.getElementById('news-image').src = news.image;
-                    document.getElementById('news-image').alt = news.title;
+                    document.getElementById('news-title').textContent = currentNews.title;
+                    document.getElementById('news-image').src = currentNews.image;
+                    document.getElementById('news-image').alt = currentNews.title;
 
-                    // Attach event listener to the "Read Full News" button
-                    const readFullNewsBtn = document.getElementById('read-fullnews-btn');
-                    const modal = document.getElementById('fullnews-modal');
-                    const modalNewsTitle = document.getElementById('modal-news-title');
-                    const modalNewsContent = document.getElementById('modal-news-content');
-                    readFullNewsBtn.addEventListener('click', function () {
-                        modalNewsTitle.textContent = news.title;
-                        modalNewsContent.innerHTML = news.fullnews;
-                        modal.style.display = 'block';
+                    // Fetch the fullnews content from the .txt file
+                    fetch(`assets/fullnews/${currentNews.fullnewsFile}`)
+                        .then(response => response.text())
+                        .then(fullnewsContent => {
+                            document.getElementById('news-paragraph').innerHTML = fullnewsContent; // Render as HTML
+                        })
+                        .catch(error => {
+                            console.error('Error fetching fullnews content:', error);
+                            document.getElementById('news-paragraph').innerHTML = '<p>Failed to load full news content.</p>';
+                        });
 
-                        // Load comments for the news
-                        fetch('assets/data/comments.json')
-                            .then(response => response.json())
-                            .then(commentsData => {
-                                const comments = commentsData[`news${parseInt(newsId) + 1}`] || [];
-                                commentsSection.innerHTML = comments.length
-                                    ? comments.map(comment => `<li>${comment}</li>`).join('')
-                                    : '<li>No comments yet. Be the first to comment!</li>';
-                            });
-                    });
+                    // Generate pagination links
+                    const paginationContainer = document.getElementById('news-pagination');
+                    paginationContainer.innerHTML = newsDetails
+                        .map((news, index) => {
+                            if (index.toString() === currentNewsId) return ''; // Exclude current page
+                            return `<a style='color: orange; margin: 20px; font-size: 1rem' href="news.html?id=${index}" class="pagination-link">${news.title}</a>`;
+                        })
+                        .join('');
                 })
                 .catch(error => {
                     console.error('Error fetching news data:', error);
                     document.getElementById('news-title').textContent = 'Error';
-                    document.getElementById('news-content').innerHTML = '<p>Failed to load news content.</p>';
+                    document.getElementById('news-paragraph').innerHTML = '<p>Failed to load news content.</p>';
                 });
-
-            // Close modal on clicking the close button
-            const modalClose = document.querySelector('.modal-close');
-            modalClose.addEventListener('click', function () {
-                modal.style.display = 'none';
-            });
-
-            // Close modal on clicking outside the modal content
-            window.addEventListener('click', function (event) {
-                if (event.target === modal) {
-                    modal.style.display = 'none';
-                }
-            });
         });
-    </script>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const urlParams = new URLSearchParams(window.location.search);
-        const newsId = urlParams.get('id');
-        const modal = document.getElementById('fullnews-modal');
-        const modalClose = document.querySelector('.modal-close');
-        const modalCloseBtn = document.querySelector('.modal-close-btn');
-        const modalNewsTitle = document.getElementById('modal-news-title');
-        const modalNewsContent = document.getElementById('modal-news-content');
-        const commentsSection = document.getElementById('comments-section');
-        const submitComment = document.getElementById('submit-comment');
-        const commentInput = document.getElementById('comment-input');
-        const readFullNewsBtn = document.getElementById('read-fullnews-btn');
-
-        if (!newsId) {
-          document.getElementById('news-title').textContent = 'News Not Found';
-          document.getElementById('news-content').innerHTML = '<p>Invalid news ID.</p>';
-          return;
-        }
-
-        fetch('assets/data/news.json')
-          .then(response => response.json())
-          .then(newsDetails => {
-            const news = newsDetails[newsId];
-            if (!news) {
-              document.getElementById('news-title').textContent = 'News Not Found';
-              document.getElementById('news-content').innerHTML = '<p>Invalid news ID.</p>';
-              return;
-            }
-
-            document.getElementById('news-title').textContent = news.title;
-            document.getElementById('news-content').innerHTML = news.content;
-            document.getElementById('news-image').src = news.image;
-            document.getElementById('news-image').alt = news.title;
-
-            // Attach event listener to the "Read Full News" button
-            readFullNewsBtn.addEventListener('click', function () {
-              modalNewsTitle.textContent = news.title;
-              modalNewsContent.innerHTML = news.fullnews;
-              modal.style.display = 'block';
-
-              // Load comments for the news
-              fetch('assets/data/comments.json')
-                .then(response => response.json())
-                .then(commentsData => {
-                  const comments = commentsData[`news${parseInt(newsId) + 1}`] || [];
-                  commentsSection.innerHTML = comments.length
-                    ? comments.map(comment => `<li>${comment}</li>`).join('')
-                    : '<li>No comments yet. Be the first to comment!</li>';
-                });
-            });
-          })
-          .catch(error => {
-            console.error('Error fetching news data:', error);
-            document.getElementById('news-title').textContent = 'Error';
-            document.getElementById('news-content').innerHTML = '<p>Failed to load news content.</p>';
-          });
-
-        // Close modal on clicking the close button or close button at the bottom
-        modalClose.addEventListener('click', function () {
-          modal.style.display = 'none';
-        });
-
-        modalCloseBtn.addEventListener('click', function () {
-          modal.style.display = 'none';
-        });
-
-        // Close modal on clicking outside the modal content
-        window.addEventListener('click', function (event) {
-          if (event.target === modal) {
-            modal.style.display = 'none';
-          }
-        });
-
-        // Handle comment submission
-        submitComment.addEventListener('click', function () {
-          const comment = commentInput.value.trim();
-          if (comment) {
-            fetch('assets/data/comments.json')
-              .then(response => response.json())
-              .then(commentsData => {
-                const newsKey = `news${parseInt(newsId) + 1}`;
-                const comments = commentsData[newsKey] || [];
-
-                if (comments.length >= 10) {
-                  comments.shift(); // Remove the oldest comment if limit is reached
-                }
-
-                comments.unshift(comment); // Add the new comment to the beginning
-                commentsData[newsKey] = comments;
-
-                // Update the JSON file (mocked here, requires server-side handling)
-                fetch('assets/data/comments.json', {
-                  method: 'PUT', // Replace with PUT or PATCH for real server
-                  headers: { 'Content-Type': 'application/json' },
-                  body: JSON.stringify(commentsData)
-                })
-                  .then(() => {
-                    // Update the comments section
-                    commentsSection.innerHTML = comments.map(c => `<li>${c}</li>`).join('');
-                    commentInput.value = '';
-                  })
-                  .catch(error => console.error('Error updating comments:', error));
-              });
-          }
-        });
-      });
     </script>
 </body>
 </html>

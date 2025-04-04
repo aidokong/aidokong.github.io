@@ -124,7 +124,7 @@
                     <div class="news__additional" style="display: none;">
                         <p>Additional news content goes here. This section will be revealed when the "Read More" button is clicked.</p>
                     </div>
-                    <a href="#" class="button" id="read-more-btn">Read More</a>
+                    <a href="articles/design.html" class="button" id="read-more-btn">Read More</a>
                     <div class="tech-news" style="display: none;">
                         <p>Latest updates and articles on technology and programming.</p>
                     </div>
@@ -144,7 +144,7 @@
                     <div class="news__additional1" style="display: none;">
                         <p>Additional news content goes here. This section will be revealed when the "Read More" button is clicked.</p>
                     </div>
-                    <a href="#" class="button" id="read-more-btn1">Read More</a>
+                    <a href="articles/tech.html" class="button" id="read-more-btn1">Read More</a>
                     <div class="tech-news" style="display: none;">
                         <p>Latest updates and articles on technology and programming.</p>
                     </div>
@@ -164,7 +164,7 @@
                     <div class="news__additional2" style="display: none;">
                         <p>Additional news content goes here. This section will be revealed when the "Read More" button is clicked.</p>
                     </div>
-                    <a href="#" class="button" id="read-more-btn2">Read More</a>
+                    <a href="articles/climate.html" class="button" id="read-more-btn2">Read More</a>
                     <div class="tech-news" style="display: none;">
                         <p>Latest updates and articles on technology and programming.</p>
                     </div>
@@ -184,7 +184,7 @@
                     <div class="news__additional3" style="display: none;">
                         <p>Additional news content goes here. This section will be revealed when the "Read More" button is clicked.</p>
                     </div>
-                    <a href="#" class="button" id="read-more-btn3">Read More</a>
+                    <a href="articles/diy.html" class="button" id="read-more-btn3">Read More</a>
                     <div class="tech-news" style="display: none;">
                         <p>Latest updates and articles on technology and programming.</p>
                     </div>
@@ -432,20 +432,8 @@
     }
 </style>
 
-<!-- Modal Structure -->
-<div id="news-modal" class="modal">
-  <div class="modal-content">
-    <span class="modal-close">&times;</span>
-    <h2>News Details</h2>
-    <p id="modal-news-content">This is where the detailed news content will appear.</p>
-  </div>
-</div>
-
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    const modal = document.getElementById('news-modal');
-    const modalClose = document.querySelector('.modal-close');
-    const modalContent = document.getElementById('modal-news-content');
     const newsContainer = document.querySelector('.news__container');
 
     // Fetch dynamic content from JSON file
