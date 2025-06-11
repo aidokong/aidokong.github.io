@@ -44,7 +44,7 @@
             <!--===== HOME =====-->
             <section class="home" id="home">
                 <div class="home__container bd-grid">
-                    <h1 class="home__title"><span>HE</span><br>LLO.</h1>
+                    <h1 class="home__title"><span>Aidoko</span><br>Emmanuel.</h1>
 
                     <div class="home__scroll">
                         <a href="#about" class="home__scroll-link"><i class='bx bx-up-arrow-alt' ></i>Scroll down</a>
@@ -55,8 +55,9 @@
 
  <!-- CV Floating Button (only in Home section) -->
     <div class="cv-float-btn" id="cvFloatBtn">
-        <i class='bx bx-download'></i>
-    </div>
+    <i class='bx bx-download'></i>
+    <span class="cv-float-text">Download CV</span>
+</div>
     <!-- CV Sliding Panel (only in Home section) -->
 
     <!-- Add this before .cv-slide-panel in your Home section -->
@@ -67,9 +68,9 @@
             <span>Download CV</span>
             <span class="cv-slide-close" id="cvSlideClose">&times;</span>
         </div>
-        <a href="assets/files/animator-cv.pdf" class="cv-slide-link" download>Animator CV</a>
         <a href="assets/files/software-engineer-cv.pdf" class="cv-slide-link" download>Software Engineer CV</a>
-        <a href="assets/files/climate-change-cv.pdf" class="cv-slide-link" download>Climate Change CV</a>
+        <a href="assets/files/animator-cv.pdf" class="cv-slide-link cv-link-disabled" tabindex="-1" aria-disabled="true" style="pointer-events: none; opacity: 0.5;">Animator CV</a>
+        <a href="assets/files/climate-change-cv.pdf" class="cv-slide-link cv-link-disabled" tabindex="-1" aria-disabled="true" style="pointer-events: none; opacity: 0.5;">Climate Change CV</a>
     </div>
                 
 
@@ -195,45 +196,45 @@ Let’s connect — whether it’s to collaborate, create, or make something mea
 
                 <div class="portfolio__container bd-grid">
                     <div class="portfolio__img">
-                        <img src="assets/img/work1.jpg" alt="">
+                        <img src="assets/img/pythonn.png" alt="python">
 
                         <div class="portfolio__link">
-                            <a href="#" class="portfolio__link-name">View details</a>
+                            <a href="#" class="portfolio__link-name" data-portfolio="1">View details</a>
                         </div>
                     </div>
                     <div class="portfolio__img">
-                        <img src="assets/img/work2.jpg" alt="">
+                        <img src="assets/img/blender.jpeg" alt="blender">
 
                         <div class="portfolio__link">
-                            <a href="#" class="portfolio__link-name">View details</a>
+                            <a href="#" class="portfolio__link-name" data-portfolio="2">View details</a>
                         </div>
                     </div>
                     <div class="portfolio__img">
-                        <img src="assets/img/work3.jpg" alt="">
+                        <img src="assets/img/opentoonz.jpeg" alt="opentoonz">
 
                         <div class="portfolio__link">
-                            <a href="#" class="portfolio__link-name">View details</a>
+                            <a href="#" class="portfolio__link-name" data-portfolio="3">View details</a>
                         </div>
                     </div>
                     <div class="portfolio__img">
-                        <img src="assets/img/work4.jpg" alt="">
+                        <img src="assets/img/dart.png" alt="">
 
                         <div class="portfolio__link">
-                            <a href="#" class="portfolio__link-name">View details</a>
+                            <a href="#" class="portfolio__link-name" data-portfolio="4">View details</a>
                         </div>
                     </div>
                     <div class="portfolio__img">
-                        <img src="assets/img/work5.jpg" alt="">
+                        <img src="assets/img/climate.png" alt="Climate Change Awareness">
 
                         <div class="portfolio__link">
-                            <a href="#" class="portfolio__link-name">View details</a>
+                            <a href="#" class="portfolio__link-name" data-portfolio="5">View details</a>
                         </div>
                     </div>
                     <div class="portfolio__img">
-                        <img src="assets/img/work6.jpg" alt="">
+                        <img src="assets/img/web_dev.jpeg" alt="Web Development">
 
                         <div class="portfolio__link">
-                            <a href="#" class="portfolio__link-name">View details</a>
+                            <a href="#" class="portfolio__link-name" data-portfolio="6">View details</a>
                         </div>
                     </div>
                 </div>
@@ -348,5 +349,106 @@ Let’s connect — whether it’s to collaborate, create, or make something mea
   }
   form.addEventListener("submit", handleSubmit)
 </script>
+
+<!-- Portfolio Modal -->
+<div id="portfolioModal" class="portfolio-modal">
+    <div class="portfolio-modal-content">
+        <span class="portfolio-modal-close" id="portfolioModalClose">&times;</span>
+        <div id="portfolioModalBody">
+            <!-- Dynamic content goes here -->
+        </div>
+    </div>
+</div>
+
+<style>
+/* Minimal modal styles, move to your CSS file for production */
+.portfolio-modal {
+    display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.6); justify-content: center; align-items: center;
+}
+.portfolio-modal.active { display: flex; }
+.portfolio-modal-content {
+    background: #fff; padding: 2rem; border-radius: 8px; max-width: 400px; width: 90%; position: relative;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.2);
+    max-height: 80vh;
+    overflow-y: auto;
+}
+.portfolio-modal-close {
+    position: absolute; top: 10px; right: 16px; font-size: 2rem; cursor: pointer;
+}
+</style>
+
+<script>
+// ...existing code...
+
+// Portfolio modal logic
+const portfolioDetails = [
+    {
+        title: "Python",
+        img: "assets/img/pythonn.png",
+        desc: "This project showcases my ability to leverage Python to solve real-world problems through automation. Built using core Python and relevant libraries, the tool streamlines repetitive tasks, increases efficiency, and demonstrates my backend scripting skills. It reflects my strong grasp of Python logic, file handling, and data manipulation, making it a practical solution for both developers and non-technical users."
+    },
+    {
+        title: "Blender Animation",
+        img: "assets/img/blender.jpeg",
+        desc: `This project showcases my skills in 3D modeling and animation using Blender. I created a short animated film that demonstrates my ability to bring characters and environments to life through detailed modeling, texturing, and rigging.<br><br>
+    <strong>Watch a short Blender animation:</strong><br>
+    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-bottom:1rem;">
+      <iframe src="https://www.youtube.com/embed/mfqQ1b1Uu1k" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+    </div>
+    <img src="https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif" alt="Blender Animation GIF" style="width:100%;border-radius:6px;margin-top:1rem;">`
+    },
+    {
+        title: "Opentoonz Animation",
+        img: "assets/img/opentoonz.jpeg",
+        desc: `This project showcases my skills in 2D animation using Opentoonz. I created a short animated sequence that demonstrates my ability to bring characters and scenes to life through traditional animation techniques.<br><br>
+    <strong>Watch a short Opentoonz animation:</strong><br>
+    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-bottom:1rem;">
+      <iframe src="https://www.youtube.com/embed/2lQ5xw3iCkU" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+    </div>
+    <img src="https://media.giphy.com/media/3o7TKtnuHOHHUjR38Y/giphy.gif" alt="Opentoonz Animation GIF" style="width:100%;border-radius:6px;margin-top:1rem;">`
+    },
+    {
+        title: "Dart Mobile App",
+        img: "assets/img/dart.png",
+        desc: "This project showcases my skills in mobile app development using Dart and Flutter. I created a fully functional mobile application that demonstrates my ability to build responsive and user-friendly interfaces."
+    },
+    {
+        title: "Climate Change Awareness",
+        img: "assets/img/climate.png",
+        desc: "This project aims to raise awareness about climate change and its impacts. It includes a series of informative graphics and animations that illustrate the effects of global warming and the importance of sustainability."
+    },
+    {
+        title: "Web Development Project",
+        img: "assets/img/web_dev.jpeg",
+        desc: "This project showcases my skills in web development using HTML, CSS, and JavaScript. I created a responsive website that demonstrates my ability to build user-friendly interfaces and implement interactive features."
+    }
+];
+
+document.querySelectorAll('.portfolio__link-name').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const idx = parseInt(this.getAttribute('data-portfolio'), 10) - 1;
+        const modal = document.getElementById('portfolioModal');
+        const body = document.getElementById('portfolioModalBody');
+        const data = portfolioDetails[idx];
+        body.innerHTML = `
+            <h3>${data.title}</h3>
+            <img src="${data.img}" alt="${data.title}" style="width:100%;border-radius:6px;margin-bottom:1rem;">
+            <p>${data.desc}</p>
+        `;
+        modal.classList.add('active');
+    });
+});
+document.getElementById('portfolioModalClose').onclick = function() {
+    document.getElementById('portfolioModal').classList.remove('active');
+};
+document.getElementById('portfolioModal').onclick = function(e) {
+    if (e.target === this) this.classList.remove('active');
+};
+// ...existing code...
+</script>
+<!-- ...existing code... -->
 </html>
     </body>
+
