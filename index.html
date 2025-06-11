@@ -1,458 +1,352 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2106993337225854"
-     crossorigin="anonymous"></script>
-    <meta name="google-adsense-account" content="ca-pub-2106993337225854">
-<title>Aidoko - Animation, Tech News, Design, Climate & DIY</title>
-    <meta name="description" content="Stay updated with the latest in animation, tech news, design trends, climate change, children's education, and DIY projects on Aidoko.com.ng.">
-    <meta name="keywords" content="aidoko animation, aidoko tech news, aidoko design, aidoko climate change, aidoko DIY, aidoko children's aidoko education">
-    <meta name="author" content="Aidoko">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Aidoko - Your Hub for Tech, Animation & DIY">
-    <meta property="og:description" content="Explore the latest in animation, technology, design, and DIY projects.">
-    <meta property="og:url" content="https://aidoko.com.ng">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://aidoko.com.ng/assets/img/aidoko-logo.png">
-    <meta property="og:description" content="Explore animations, tech news, design insights, climate change, children's education, and DIY projects.">
-    <meta property="og:image" content="https://aidoko.com.ng/assets/img/aidoko-logo.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Aidoko - Animation, Tech, and DIY">
-    <meta name="twitter:description" content="Explore animations, tech news, design insights, climate change, children's education, and DIY projects.">
-    <meta name="twitter:image" content="https://aidoko.com.ng/assets/img/aidoko-logo.png">
-    <meta charset="UTF-8">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="/jquery/jquery.js"></script>
-        <script src="/jquery/customjq.js"></script>
-        <link rel="stylesheet" href="assets/css/custom.css">
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!--========== BOX ICONS ==========-->
-        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    
-        <link rel="stylesheet" href="assets/slick/boxicons.min.css">
-
-        <!--========== CSS ==========-->
+        <!-- ===== CSS ===== -->
         <link rel="stylesheet" href="assets/css/styles.css">
-        <link rel="icon" href="assets/img/favicon.ico">
+        <link rel="stylesheet" href="assets/css/custom.css">
+        <script src="assets/js/jquery.js"></script>
+        <script src="assets/js/jq_custom.js"></script>
 
+        <!-- ===== BOX ICONS ===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-      
-
-        <script src="assets/slick/slick.min.js"></script>
-        
-        <link rel="stylesheet" href="assets/slick/slick.min.css">
-
-        <link rel="stylesheet" href="assets/slick/slick-theme.min.css">
-       
-
-        <script src="https://meet.jit.si/external_api.js"></script>
+        <title>Portfolio responsive complete</title>
     </head>
-<body>
-    <!--========== SCROLL TOP ==========-->
-    <a href="#" class="scrolltop" id="scroll-top">
-        <i class='bx bx-up-arrow-alt scrolltop__icon'></i>
-    </a>
-    
-    <!--========== HEADER ==========-->
-    <header class="l-header" >
-        <nav class="nav bd-container">
-            <a href="#" class="nav__logo">
-            
-             <div class="logo__main active-link">
-                <img src="/assets/img/logo.png" alt="Logo 1" class="logo__primary">
-                <img src="/assets/img/logo2.png" alt="logo" class="logo__secondary" style="display: none;"> 
-              </div>
-            </a>
+    <body>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo">Aidoko Emmanuel</a>
+                </div>
 
-            <div class="nav__menu" id="nav-menu" style="background-color: #DA2535;">
-                <ul class="nav__list">
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                        <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    </ul>
+                </div>
 
-                    <li class="nav__item"><a href="#design" class="nav__link">Design</a></li>
-                    <li class="nav__item"><a href="#tech" class="nav__link">Tech</a></li>
-                    <li class="nav__item"><a href="#climate" class="nav__link">Climate Change</a></li>
-                    <li class="nav__item"><a href="https://blog.aidoko.com.ng" class="nav__link">News</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                    <li class="nav__item"><a href="#contact_us" class="nav__link">Contact Us</a></li>
-
-                    <li><i class='bx bx-toggle-left change-theme' id="theme-button"></i></li>
-                </ul>
-            </div>
-
-            <div class="nav__toggle" id="nav-toggle">
-                <i class='bx bx-grid-alt'></i>
-            </div>
-        </nav>
-    </header>
-
-    <main class="l-main" align="center">
-        <!--========== HOME ==========-->
-        <section class="home" id="home">
-            
-                    <div style="height: 100%; margin-top: 3%;" >
-                        <img src="assets/img/all.png" alt="" class="large-image">
-                    </div>
-                
-                    <div class="progress-bar" id="progress">
-
-                    </div>
-            
-            
-        </section>
-        <section class="big_head"></section>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
         
 
-        <style>
-            .videos__container {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                gap: 20px;
-            }
-        </style>
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home" id="home">
+                <div class="home__container bd-grid">
+                    <h1 class="home__title"><span>HE</span><br>LLO.</h1>
 
-        <!-- ====== DESIGN ========= -->
-        <section class="news section bd-container" id="design" style="margin-top: -200px; background-color: #c2c0c01a; border-radius: 10px; margin-top: 0.001cqmin;">
-            <div class="news__container bd-grid">
-                <div class="news__data">
-                    <!-- <h2 class="section-title-center">Learn To Design like a PRO</h2> -->
-                    
-                    <div class="news__img">
-                        <img src="assets/img/fish.png" alt="News Image" class="news___img">
+                    <div class="home__scroll">
+                        <a href="#about" class="home__scroll-link"><i class='bx bx-up-arrow-alt' ></i>Scroll down</a>
                     </div>
-                    <p class="news__description">Stay updated with the latest news and articles on climate change, technology, and more.</p>
-                    <div class="news__additional" style="display: none;">
-                        <p>Additional news content goes here. This section will be revealed when the "Read More" button is clicked.</p>
-                    </div>
-                    <a href="articles/design.html" class="button" id="read-more-btn">Read More</a>
-                    <div class="tech-news" style="display: none;">
-                        <p>Latest updates and articles on technology and programming.</p>
-                    </div>
-                    <div class="design-news" style="display: none;">
-                        <p>Latest updates and articles on design and animation.</p>
-                    </div>
-                    <br>
-                    <br>
 
+                    <img src="assets/img/perfil.png" alt="" class="home__img">
                 </div>
 
-                <div class="news__data">
-                    <div class="news__img">
-                        <img src="assets/img/tortoise.png" alt="News Image" class="news___img">
-                    </div>
-                    <p class="news__description">Stay updated with the latest news and articles on climate change, technology, and more.</p>
-                    <div class="news__additional1" style="display: none;">
-                        <p>Additional news content goes here. This section will be revealed when the "Read More" button is clicked.</p>
-                    </div>
-                    <a href="articles/tech.html" class="button" id="read-more-btn1">Read More</a>
-                    <div class="tech-news" style="display: none;">
-                        <p>Latest updates and articles on technology and programming.</p>
-                    </div>
-                    <div class="design-news" style="display: none;">
-                        <p>Latest updates and articles on design and animation.</p>
-                    </div>
-                    <br>
-                    <br>
-
-                </div>
-
-                <div class="news__data">
-                    <div class="news__img">
-                        <img src="assets/img/simpson.png" alt="News Image" class="news___img">
-                    </div>
-                    <p class="news__description">Stay updated with the latest news and articles on climate change, technology, and more.</p>
-                    <div class="news__additional2" style="display: none;">
-                        <p>Additional news content goes here. This section will be revealed when the "Read More" button is clicked.</p>
-                    </div>
-                    <a href="articles/climate.html" class="button" id="read-more-btn2">Read More</a>
-                    <div class="tech-news" style="display: none;">
-                        <p>Latest updates and articles on technology and programming.</p>
-                    </div>
-                    <div class="design-news" style="display: none;">
-                        <p>Latest updates and articles on design and animation.</p>
-                    </div>
-                    <br>
-                    <br>
-
-                </div>
-
-                <div class="news__data">
-                    <div class="news__img">
-                        <img src="assets/img/krita.png" alt="News Image" class="news___img">
-                    </div>
-                    <p class="news__description">Stay updated with the latest news and articles on climate change, technology, and more.</p>
-                    <div class="news__additional3" style="display: none;">
-                        <p>Additional news content goes here. This section will be revealed when the "Read More" button is clicked.</p>
-                    </div>
-                    <a href="articles/diy.html" class="button" id="read-more-btn3">Read More</a>
-                    <div class="tech-news" style="display: none;">
-                        <p>Latest updates and articles on technology and programming.</p>
-                    </div>
-                    <div class="design-news" style="display: none;">
-                        <p>Latest updates and articles on design and animation.</p>
-                    </div>
-                    <br>
-                    <br>
-
-                </div>
-
-                <div class="news_data">
-                    <a href="climate.html" class="button">Climate News</a>
-                    <a href="Tech.html" class="button" >Tech News</a>
-                </div>
-
-               
-            </div>
-        </section>
-
-       
-       
-      
-
-        <!-- =========climate change ========== -->
-
-      
-          <!--========== VIRTUAL LESSON ==========-->
-          <section class="virtual-lesson section bd-container" id="virtual-lesson">
-            <h2 class="section-title-center">Join Our Virtual Lesson</h2>
-            <input type="text" id="meeting-code" placeholder="Enter Meeting Code" class="send__input" style="height: 50px; background-color:  #ffffff; border: #25d366 2px solid; border-radius: 5px; box-shadow: 2px 2px 2px black;">
-           <br> <br>  <button id="join-meeting" class="button">Join Meeting</button>
-            <div id="jitsi-container" style="height: 600px; display: none;"></div>
-        </section>
-
-        <!--========== SEND GIFT ==========-->
-        <section class="send section" id="contact_us">
-            <div class="send__container bd-container bd-grid">
-                <div class="send__content">
-                    <h2 class="section-title-center send__title">Write me a Message</h2>
-                    <p class="send__description">Leave me an Email.</p>
-                    <form action="">
-                        <div class="send__direction">
-                            <input type="text" placeholder="Your name" class="send__input" height="50px">
-
-                            
-                        </div>
-
-                        <br>
-
-                        <div class="send__direction">
-                            <textarea  placeholder="Your Message" class="send__input" style="color: #25d366;"> </textarea>
-
-                            
-                            <a class="button">Send</a>
-                        </div>
-                       
-                    </form>
-                </div>
-
-                <div class="send__img">
-                    <img src="assets/img/send.png" alt="">
-                </div>
-            </div>
-        </section>
-       
-    </main>
-
-    <!--========== FOOTER ==========-->
-    <footer class="footer section">
-        <div class="footer__container bd-container bd-grid">
-            <div class="footer__content">
-                <h3 class="footer__title">
-                    <a href="#" class="footer__logo">Address</a>
-                </h3>
-                <p class="footer__description">Kubwa Nasco Road <br> Abuja Nigeria</p>
-            </div>
-
-            <div class="footer__content">
-                <h3 class="footer__title">Our Services</h3>
-                <ul>
-                    <li><a href="#climate" class="footer__link">Climate Change </a></li>
-                    <li><a href="#tech" class="footer__link">App Development</a></li>
-                    <li><a href="#design" class="footer__link">Animation | Graphics</a></li>
-                </ul>
-            </div>
-
-            <div class="footer__content">
-                <h3 class="footer__title">Our Company</h3>
-                <ul>
-                    <li><a href="https://blog.aidoko.com.ng" class="footer__link">Blog</a></li>
-                    <li><a href="#about" class="footer__link">About Us</a></li>
-                    <li><a href="#contac_us" class="footer__link">Contact Us</a></li>
-                </ul>
-            </div>
-
-            <div class="footer__content">
-                <h3 class="footer__title">Social</h3>
-                <a href="https://www.facebook.com/terryems" class="footer__social"><i class='bx bxl-facebook-circle '></i></a>
-                <a href="https://www.linkedin.com/in/terryems" class="footer__social"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://www.github.com/terryems" class="footer__social"><i class='bx bxl-github'></i></a>
-
-            </div>
-        </div>
-
-        <p class="footer__copy" > &#169;2025 | Aidoko  All right reserved</p>
-    </footer>
-
-    <!--========== SCROLL REVEAL ==========-->
-    <script src="https://unpkg.com/scrollreveal"></script>
-    
-    <!--========== MAIN JS ==========-->
-    <script src="assets/js/main.js"></script>
-    <a href="https://wa.me/+2347069253361" class="whatsapp_float" target="_blank">
-        <i class='bx bxl-whatsapp'></i>
-    </a>
-    <div class="whatsapp_popup" id="whatsapp_popup">
-        <div class="whatsapp_popup_header">
-            <span>WhatsApp Chat</span>
-            <button id="close_whatsapp_popup">&times;</button>
-        </div>
-        <div class="whatsapp_popup_body">
-            <p>How can I help you?</p>
-            <a href="https://wa.me/+2347069253361" target="_blank" class="button">Start Chat</a>
-        </div>
+ <!-- CV Floating Button (only in Home section) -->
+    <div class="cv-float-btn" id="cvFloatBtn">
+        <i class='bx bx-download'></i>
     </div>
-    <style>
-        .whatsapp_float {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 40px;
-            left: 60px;
-            background-color: #25d366;
-            color: #FFF;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 3px #999;
-            z-index: 100;
-        }
+    <!-- CV Sliding Panel (only in Home section) -->
 
-        .whatsapp_float i {
-            margin-top: 16px;
-        }
+    <!-- Add this before .cv-slide-panel in your Home section -->
+<div class="cv-overlay" id="cvOverlay"></div>
 
-        .whatsapp_popup {
-            display: none;
-            position: fixed;
-            bottom: 100px;
-            left: 60px;
-            width: 300px;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            z-index: 101;
-        }
+    <div class="cv-slide-panel" id="cvSlidePanel">
+        <div class="cv-slide-header">
+            <span>Download CV</span>
+            <span class="cv-slide-close" id="cvSlideClose">&times;</span>
+        </div>
+        <a href="assets/files/animator-cv.pdf" class="cv-slide-link" download>Animator CV</a>
+        <a href="assets/files/software-engineer-cv.pdf" class="cv-slide-link" download>Software Engineer CV</a>
+        <a href="assets/files/climate-change-cv.pdf" class="cv-slide-link" download>Climate Change CV</a>
+    </div>
+                
 
-        .whatsapp_popup_header {
-            padding: 10px;
-            background-color: #25d366;
-            color: #fff;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
 
-        .whatsapp_popup_body {
-            padding: 20px;
-            text-align: center;
-        }
+            </section>
 
-        .whatsapp_popup_body p {
-            margin-bottom: 20px;
-        }
+  <script>
+const cvBtn = document.getElementById('cvFloatBtn');
+const cvPanel = document.getElementById('cvSlidePanel');
+const cvClose = document.getElementById('cvSlideClose');
+const cvOverlay = document.getElementById('cvOverlay');
+const homeSection = document.getElementById('home');
 
-        .whatsapp_popup_body .button {
-            background-color: #25d366;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-        }
-    </style>
-    <script>
-        $(document).ready(function(){
-            $('.slider').slick({
-                autoplay: true,
-                autoplaySpeed: 5000,
-                dots: true,
-                arrows: false,
-                fade: true,
-                cssEase: 'linear'
-            });
-
-            $('.read-more').on('click', function(event) {
-                event.preventDefault();
-                $(this).closest('.blog__post').find('.blog__post-description').slideToggle();
-            });
-        });
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const whatsappFloat = document.querySelector('.whatsapp_float');
-            const whatsappPopup = document.getElementById('whatsapp_popup');
-            const closeWhatsappPopup = document.getElementById('close_whatsapp_popup');
-
-            whatsappFloat.addEventListener('click', function(event) {
-                event.preventDefault();
-                whatsappPopup.style.display = 'block';
-            });
-
-            closeWhatsappPopup.addEventListener('click', function() {
-                whatsappPopup.style.display = 'none';
-            });
-        });
-    </script>
-    
-<style>
-    .home__slide {
-        display: none;
+// Show/hide CV button and panel based on scroll
+function toggleCVBtnOnScroll() {
+    const rect = homeSection.getBoundingClientRect();
+    const inView = rect.bottom > 80 && rect.top < window.innerHeight - 80;
+    if (inView) {
+        cvBtn.classList.remove('cv-hide');
+        // Only show panel/overlay if they are active
+        if (cvPanel.classList.contains('active')) cvPanel.classList.remove('cv-hide');
+        if (cvOverlay.classList.contains('active')) cvOverlay.classList.remove('cv-hide');
+    } else {
+        cvBtn.classList.add('cv-hide');
+        cvPanel.classList.add('cv-hide');
+        cvOverlay.classList.add('cv-hide');
     }
-    .home__slide.active {
-        display: block;
-    }
-    .progress-bar {
-        /* margin-top: 3%; */
-        width: 100%;
-        height: 5px;
-        background-color: #ff0000;
-        position: relative;
-        top: -5px;
-    }
-    .progress {
-        height: 100%;
-        background-color: #DA2535;
-        width: 0;
-    }
-    .home__img img.large-image {
-        width: 100%;
-        height: auto;
-    }
-</style>
+}
+window.addEventListener('scroll', toggleCVBtnOnScroll);
+window.addEventListener('resize', toggleCVBtnOnScroll);
+document.addEventListener('DOMContentLoaded', toggleCVBtnOnScroll);
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const newsContainer = document.querySelector('.news__container');
-
-    // Fetch dynamic content from JSON file
-    fetch('assets/data/news.json')
-      .then(response => response.json())
-      .then(newsDetails => {
-        // Populate news items dynamically
-        newsContainer.innerHTML = newsDetails.map((news, index) => `
-          <div class="news__data">
-            <div class="news__img">
-              <img src="${news.image}" alt="${news.title}" class="news___img">
-            </div>
-            <p class="news__description">${news.content}</p>
-            <a href="news.html?id=${index}" class="button">Read More</a>
-          </div>
-        `).join('');
-      })
-      .catch(error => console.error('Error fetching news data:', error));
-  });
+// Existing panel open/close logic
+cvBtn.onclick = function() {
+    cvPanel.classList.add('active');
+    cvOverlay.classList.add('active');
+    cvPanel.classList.remove('cv-hide');
+    cvOverlay.classList.remove('cv-hide');
+};
+cvClose.onclick = function() {
+    cvPanel.classList.remove('active');
+    cvOverlay.classList.remove('active');
+};
+cvOverlay.onclick = function() {
+    cvPanel.classList.remove('active');
+    cvOverlay.classList.remove('active');
+};
 </script>
-</body>
+            
+            <!--===== ABOUT =====-->
+            <section class="about section" id="about">
+                <h2 class="section-title">About</h2>
+
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="assets/img/face.png" alt="" style="width: 220px; height: 220px;">
+                    </div>
+
+                    <div>
+                        <h2 class="about__subtitle">I'am Aidoko Emmanuel</h2>
+                        <span class="about__profession">Web designer</span>
+                        <p class="about__text" style="text-align: justify;">Hi, I'm Emmanuel Simon. A passionate and versatile Software Engineer,Devops,  Web Developer, Data Analyst, Graphics Designer, and Animator. I specialize in building smart, efficient, and visually engaging digital solutions that merge creativity with functionality.
+
+With a strong foundation in Python (Flask/Django, Pygame, P4Android), HTML/CSS, and MySQL, I create powerful web applications and data-driven tools. 
+<span class="more-text" style="display:none;">
+    I also bring stories to life through animations and graphic design, with a focus on climate change education, tech innovation, and youth empowerment.
+
+I'm the founder of Aidoko and Friends Environmental Foundation, where we use comics, animation, and storytelling to raise awareness on environmental issues among children and young adults across Nigeria — in Pidgin, Yoruba, Hausa, and Igbo.
+
+I hold certifications in Software Engineering (ALX), Frontend Development, AI Essentials, Web Development, and Blockchain Technology. I believe in the power of tech for good and constantly explore new ways to use digital tools for real-world impact.
+
+Let’s connect — whether it’s to collaborate, create, or make something meaningful.
+  </span> <br>
+  <button href="#" class="read-more-btn" style="border: 1px solid #5361FF;">Read more</button>
+
+</p>
+
+                        <div class="about__social">
+                            <a href="https://www/bxl-linkedin.com/on/terryems" class="about__social-icon"><i class='bx bxl-linkedin' ></i></a>
+                            <a href="https://github.com/terryems" class="about__social-icon"><i class='bx bxl-github' ></i></a>
+                            <a href="https://www.facebook.com/terryems" class="about__social-icon"><i class='bx bxl-facebook' ></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--===== SKILLS =====-->
+            <section class="skills section" id="skills">
+                <h2 class="section-title">Skills</h2>
+
+                <div class="skills__container bd-grid">
+                    <div class="skills__box">
+                        <h3 class="skills__subtitle">Software Engineer</h3>
+                        <span class="skills__name">Python</span>
+                        <span class="skills__name">Dart</span>
+                        <span class="skills__name">Javascript</span>
+                        <!-- <span class="skills__name"></span> -->
+                        <span class="skills__name">SQL</span>
+                        <span class="skills__name">Golan</span>
+                        
+                        <h3 class="skills__subtitle">Development</h3>
+                        <span class="skills__name">HTML5</span>
+                        <span class="skills__name">React JS</span>
+                        <span class="skills__name">Javascript</span>
+                        <span class="skills__name">Advanced CSS</span>
+
+                        <h3 class="skills__subtitle">Design / Animation</h3>
+                        <!-- <span class="skills__name">Figma</span> -->
+                        <span class="skills__name">Corel Draw</span>
+                        <span class="skills__name">Blender</span>
+                        <span class="skills__name">Opentoonz</span>
+                    </div>
+
+                    <div class="skills__img">
+                        <img src="assets/img/skill.jpg" alt="">
+                    </div>
+                </div>
+            </section>
+
+            <!--===== PORTFOLIO =====-->
+            <section class="portfolio section" id="portfolio">
+                <h2 class="section-title">Portfolio</h2>
+
+                <div class="portfolio__container bd-grid">
+                    <div class="portfolio__img">
+                        <img src="assets/img/work1.jpg" alt="">
+
+                        <div class="portfolio__link">
+                            <a href="#" class="portfolio__link-name">View details</a>
+                        </div>
+                    </div>
+                    <div class="portfolio__img">
+                        <img src="assets/img/work2.jpg" alt="">
+
+                        <div class="portfolio__link">
+                            <a href="#" class="portfolio__link-name">View details</a>
+                        </div>
+                    </div>
+                    <div class="portfolio__img">
+                        <img src="assets/img/work3.jpg" alt="">
+
+                        <div class="portfolio__link">
+                            <a href="#" class="portfolio__link-name">View details</a>
+                        </div>
+                    </div>
+                    <div class="portfolio__img">
+                        <img src="assets/img/work4.jpg" alt="">
+
+                        <div class="portfolio__link">
+                            <a href="#" class="portfolio__link-name">View details</a>
+                        </div>
+                    </div>
+                    <div class="portfolio__img">
+                        <img src="assets/img/work5.jpg" alt="">
+
+                        <div class="portfolio__link">
+                            <a href="#" class="portfolio__link-name">View details</a>
+                        </div>
+                    </div>
+                    <div class="portfolio__img">
+                        <img src="assets/img/work6.jpg" alt="">
+
+                        <div class="portfolio__link">
+                            <a href="#" class="portfolio__link-name">View details</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--===== CONTACT =====-->
+            <section class="contact section" id="contact">
+                <h2 class="section-title">Contact</h2>
+
+                <div class="contact__container bd-grid">
+                    <div class="contact__info">
+                        <h3 class="contact__subtitle">EMAIL</h3>
+                        <span class="contact__text">aidokoemmanuel@gmail.com</span>
+
+                        <h3 class="contact__subtitle">PHONE</h3>
+                        <span class="contact__text"><a href="tel:+2347069253361">+2347069253361</a></span>
+
+                        <h3 class="contact__subtitle">ADRESS</h3>
+                        <span class="contact__text">Gado Nasco Rd. Kubwa Abuja.</span>
+                    </div>
+
+                    <form action="https://formspree.io/f/xnnvdqkv" class="contact__form" method="post" id="my-form">
+                        <div class="contact__inputs">
+                            <input type="text" placeholder="Name" class="contact__input" name="name">
+                            <input type="mail" placeholder="Email" class="contact__input" name="email">
+                        </div>
+
+                        <textarea name="message" id="" cols="0" rows="10" class="contact__input"></textarea>
+
+                        <input type="submit" value="Send" class="contact__button">
+                        <p id="my-form-status"></p>
+                    </form>
+
+
+
+                </div>
+            </section>
+        </main>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer section">
+            <div class="footer__container bd-grid">
+                <div class="footer__data">
+                    <h2 class="footer__title">Aidoko Emmanuel</h2>
+                    <p class="footer__text">I'm Aidoko Emmanuel and this is my personal website</p>
+                </div>
+
+                <div class="footer__data">
+                    <h2 class="footer__title">EXPLORE</h2>
+                    <ul>
+                        <li><a href="#home" class="footer__link">Home</a></li>
+                        <li><a href="#about" class="footer__link">About</a></li>
+                        <li><a href="#skills" class="footer__link">Skills</a></li>
+                        <li><a href="#portfolio" class="footer__link">Portfolio</a></li>
+                        <li><a href="#Contact" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__data">
+                    <h2 class="footer__title">FOLLOW</h2>
+                    <a href="https://www.facebook.com/terryems" class="footer__social"><i class='bx bxl-facebook' ></i></a>
+                    <a href="https://www.github.com/terryems" class="footer__social"><i class='bx bxl-github' ></i></a>
+                    <a href="https://www.linkedin.com/in/terryems" class="footer__social"><i class='bx bxl-linkedin' ></i></a>
+                </div>
+
+
+            </div>
+
+        </footer>
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+        <!-- ...existing code... -->
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/2347069253361" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <i class='bx bxl-whatsapp'></i>
+</a>
+<script src="assets/js/custom.js"></script>
+<script>
+  var form = document.getElementById("my-form");
+  
+  async function handleSubmit(event) {
+    event.preventDefault();
+    var status = document.getElementById("my-form-status");
+    var data = new FormData(event.target);
+    fetch(event.target.action, {
+      method: form.method,
+      body: data,
+      headers: {
+          'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        status.innerHTML = "Thanks for your submission!";
+        form.reset()
+      } else {
+        response.json().then(data => {
+          if (Object.hasOwn(data, 'errors')) {
+            status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+          } else {
+            status.innerHTML = "Oops! There was a problem submitting your form"
+          }
+        })
+      }
+    }).catch(error => {
+      status.innerHTML = "Oops! There was a problem submitting your form"
+    });
+  }
+  form.addEventListener("submit", handleSubmit)
+</script>
 </html>
+    </body>
