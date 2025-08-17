@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/jq_custom.js"></script>
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <title>Coding Registration | Aidoko Emmanuel</title>
+</head>
+<body class="backg">
+    <!--===== HEADER =====-->
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="index.html" class="nav__logo">Aidoko</a>
+            </div>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="news.html" class="nav__link">News</a></li>
+                    <li class="nav__item"><a href="animation-registration.html" class="nav__link active">Register for Animation</a></li>
+                    <!-- <li class="nav__item"><a href="python-registration.html" class="nav__link active">Animation Registration</a></li> -->
+                </ul>
+            </div>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-main">
+        <section class="section" id="animation-registration">
+            <h2 class="section-title">Coding Registration</h2>
+            <div class="bd-grid animation-registration-grid">
+                <div class="animation-sidebar">
+                    <img src="https://pngimg.com/uploads/python/python_PNG47.png" alt="Python Logo" class="animated-character" />
+                    <img src="https://media.giphy.com/media/KAq5w47R9rmTuvWOWa/giphy.gif" alt="Python Animated" class="animated-character" />
+                    <img src="https://pngimg.com/uploads/3d_character/3d_character_PNG46.png" alt="3D Character" class="animated-character" />
+                </div>
+                <div class="animation-form"  style="background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%); padding: 32px; border-radius: 18px;">
+                    <p class="form-description">Please fill out the form below to register for our Coding event.</p>
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe0emWa_5ipqZ6sM7QfZxF9FR8U_Ke6wWk4TD5AecYUhKP9tA/viewform?embedded=true" width="640" height="1731" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
+        </section>
+</body>
+</html>
+<style>
+/* Animation Registration Page Custom Styles */
+.animation-registration-grid {
+    display: flex;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+.animation-sidebar {
+    flex: 0 0 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    background: linear-gradient(135deg, #f7b42c 0%, #fc575e 100%);
+    border-radius: 18px;
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+.animated-character {
+    width: 180px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    animation: floaty 2.5s ease-in-out infinite alternate;
+}
+@keyframes floaty {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-18px); }
+}
+.animation-form {
+    flex: 1;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+    padding: 2rem;
+}
+.form-description {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #fc575e;
+    font-weight: 500;
+}
+@media (max-width: 900px) {
+    .animation-registration-grid {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .animation-sidebar {
+        flex-direction: row;
+        justify-content: center;
+        padding: 1rem 0.5rem;
+    }
+    .animated-character {
+        width: 120px;
+    }
+}
+</style>
+    </main>
+
+    <!--===== FOOTER =====-->
+    <footer class="footer section">
+        <div class="footer__container bd-grid">
+            <div class="footer__data">
+                <h2 class="footer__title">Aidoko Emmanuel</h2>
+                <p class="footer__text">I'm Aidoko Emmanuel and this is my personal website</p>
+            </div>
+            <div class="footer__data">
+                <h2 class="footer__title">EXPLORE</h2>
+                <ul>
+                    <li><a href="index.html" class="footer__link">Home</a></li>
+                    <li><a href="news.html" class="footer__link">News</a></li>
+                    <li><a href="animation-registration.html" class="footer__link">Animation Registration</a></li>
+                </ul>
+            </div>
+            <div class="footer__data">
+                <h2 class="footer__title">FOLLOW</h2>
+                <a href="https://www.facebook.com/terryems" class="footer__social"><i class='bx bxl-facebook' ></i></a>
+                <a href="https://www.github.com/terryems" class="footer__social"><i class='bx bxl-github' ></i></a>
+                <a href="https://www.linkedin.com/in/terryems" class="footer__social"><i class='bx bxl-linkedin' ></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/2347069253361" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <i class='bx bxl-whatsapp'></i>
+    </a>
+    <script src="assets/js/custom.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <title>Read News | Aidoko Emmanuel</title>
+</head>
+<body>
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="index.html" class="nav__logo">Aidoko</a>
+            </div>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="news.html" class="nav__link">News</a></li>
+                    <li class="nav__item"><a href="animation-registration.html" class="nav__link">Animation Registration</a></li>
+                </ul>
+            </div>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+    <main class="l-main">
+        <section class="section" id="read-section">
+            <div id="news-content" class="bd-grid" style="max-width:700px;margin:0 auto;"></div>
+        </section>
+    </main>
+    <footer class="footer section">
+        <div class="footer__container bd-grid">
+            <div class="footer__data">
+                <h2 class="footer__title">Aidoko Emmanuel</h2>
+                <p class="footer__text">I'm Aidoko Emmanuel and this is my personal website</p>
+            </div>
+            <div class="footer__data">
+                <h2 class="footer__title">EXPLORE</h2>
+                <ul>
+                    <li><a href="index.html" class="footer__link">Home</a></li>
+                    <li><a href="news.html" class="footer__link">News</a></li>
+                    <li><a href="animation-registration.html" class="footer__link">Animation Registration</a></li>
+                </ul>
+            </div>
+            <div class="footer__data">
+                <h2 class="footer__title">FOLLOW</h2>
+                <a href="https://www.facebook.com/terryems" class="footer__social" title="Facebook"><i class='bx bxl-facebook'></i></a>
+                <a href="https://www.github.com/terryems" class="footer__social" title="GitHub"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/terryems" class="footer__social" title="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+            </div>
+        </div>
+    </footer>
+    <script>
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+    fetch('news.json')
+      .then(response => response.json())
+      .then(news => {
+        const id = getQueryParam('id');
+        const item = news.find(n => n.id === id);
+        const newsContent = document.getElementById('news-content');
+        if (item) {
+          newsContent.innerHTML = `
+            <div style="background:#fff;border-radius:16px;box-shadow:0 2px 12px rgba(0,0,0,0.08);padding:2rem;">
+              <img src="${item.image}" alt="${item.title}" style="width:100%;max-width:480px;border-radius:12px;margin-bottom:1rem;">
+              <h2 style="color:#fc575e;margin-bottom:0.5rem;">${item.title}</h2>
+              <p style="margin-bottom:1rem;color:#888;font-size:0.95rem;">${item.date}</p>
+              <div style="margin-bottom:2rem;">${item.content}</div>
+              <div style="display:flex;gap:1rem;justify-content:center;">
+                <a href="https://wa.me/?text=${encodeURIComponent(document.location.href)}" target="_blank" rel="noopener" title="Share on WhatsApp" style="background:#25D366;color:#fff;padding:8px 18px;border-radius:8px;font-weight:bold;text-decoration:none;display:flex;align-items:center;gap:6px;"><i class='bx bxl-whatsapp'></i> WhatsApp</a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(document.location.href)}" target="_blank" rel="noopener" title="Share on Facebook" style="background:#4267B2;color:#fff;padding:8px 18px;border-radius:8px;font-weight:bold;text-decoration:none;display:flex;align-items:center;gap:6px;"><i class='bx bxl-facebook'></i> Facebook</a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(document.location.href)}" target="_blank" rel="noopener" title="Share on LinkedIn" style="background:#0077b5;color:#fff;padding:8px 18px;border-radius:8px;font-weight:bold;text-decoration:none;display:flex;align-items:center;gap:6px;"><i class='bx bxl-linkedin'></i> LinkedIn</a>
+              </div>
+               <div style="display:flex;justify-content:space-between;align-items:center;margin-top:2rem;">
+                 ${getPrevNextLinks(news, id)}
+               </div>
+            </div>
+          `;
+        } else {
+          newsContent.innerHTML = `<p>News not found.</p>`;
+        }
+        function getPrevNextLinks(newsArr, currentId) {
+          const idx = newsArr.findIndex(n => n.id === currentId);
+          let prev = '', next = '';
+          if (idx > 0) {
+            prev = `<a href='read.html?id=${newsArr[idx-1].id}' class='news-nav-link' style='background:#eee;color:#fc575e;padding:8px 18px;border-radius:8px;font-weight:bold;text-decoration:none;'>← Previous</a>`;
+          }
+          if (idx < newsArr.length - 1) {
+            next = `<a href='read.html?id=${newsArr[idx+1].id}' class='news-nav-link' style='background:#eee;color:#fc575e;padding:8px 18px;border-radius:8px;font-weight:bold;text-decoration:none;'>Next →</a>`;
+          }
+          return `${prev}<span></span>${next}`;
+        }
+      });
+    </script>
+</body>
+</html>

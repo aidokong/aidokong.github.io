@@ -133,4 +133,9 @@
     font-weight: bold;
     transition: background-color 0.3s, transform 0.2s;
 }
+.backg{
+    background: url('../../back.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 
