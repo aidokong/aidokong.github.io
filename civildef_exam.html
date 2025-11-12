@@ -1,0 +1,279 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2106993337225854"
+     crossorigin="anonymous"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mock NSCDC Exam — Practice</title>
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;max-width:900px;margin:24px auto;padding:16px;color:#111}
+    h1{margin-top:4px}
+    .card{border:1px solid #e2e8f0;padding:14px;border-radius:8px;background:#fff;box-shadow:0 1px 0 rgba(0,0,0,0.02)}
+    .q-number{font-weight:700;margin-bottom:6px;color:#0f172a}
+    .q-text{margin-bottom:8px}
+    .opts{margin-top:6px}
+    .opts label{display:block;margin:6px 0;padding:10px;border-radius:8px;border:1px solid transparent;cursor:pointer;transition:all .12s ease}
+    .opts input[type=radio]{margin-right:8px}
+    .nav{display:flex;gap:8px;margin-top:12px}
+    button{padding:8px 12px;border-radius:6px;border:0;background:#0366d6;color:#fff;cursor:pointer}
+    button[disabled]{opacity:0.5}
+    .small{font-size:0.9rem;color:#555}
+    .result{padding:12px;background:#f6f9ff;border:1px solid #dceeff;border-radius:8px;margin-top:12px}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    /* feedback styles */
+    .opts label.correct{background:#ecfdf5;border-color:#34d399;color:#065f46;position:relative}
+    .opts label.correct:after{content:"✔";position:absolute;right:10px;top:50%;transform:translateY(-50%);font-weight:700;color:#065f46}
+    .opts label.incorrect{background:#fff1f2;border-color:#fb7185;color:#831843;position:relative}
+    .opts label.incorrect:after{content:"✖";position:absolute;right:10px;top:50%;transform:translateY(-50%);font-weight:700;color:#831843}
+    .meta{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:12px}
+    .hidden{display:none}
+
+
+    .submit-card{
+      max-width:520px;
+      margin:18px auto;
+      padding:22px;
+      border-radius:14px;
+      background:linear-gradient(180deg,#ffffff,#f7fbff);
+      box-shadow:0 10px 30px rgba(2,6,23,0.08);
+      border:1px solid #e6f0ff;
+      text-align:center;
+    }
+    .submit-card h2{margin:0;font-size:1.6rem;color:#052a6d}
+    .score-circle{
+      width:120px;height:120px;border-radius:50%;
+      display:inline-flex;align-items:center;justify-content:center;
+      font-size:2rem;font-weight:700;
+      background:linear-gradient(180deg,#e9fff0,#d1f4e0);
+      color:#047857;border:6px solid rgba(4,120,87,0.12);
+      margin:12px 0 8px;
+    }
+    .submit-meta{color:#475569;margin-top:8px;font-size:0.95rem}
+    .grade-badge{display:inline-block;margin-top:12px;padding:8px 14px;border-radius:999px;background:#eef2ff;color:#2b46a3;font-weight:700}
+    .action-row{display:flex;gap:10px;justify-content:center;margin-top:14px}
+    .action-row button{background:#0366d6;color:#fff;padding:10px 14px;border-radius:8px;border:0;cursor:pointer}
+  </style>
+</head>
+<body>
+  <header class="l-header" style="margin-bottom:18px background:#06111CFF;padding:12px 16px;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.04)">
+    <nav class="nav bd-grid" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <div>
+        <a href="index.html" class="nav__logo" style="font-weight:700;color:#052a6d;text-decoration:none;font-size:1.05rem">Aidoko Emmanuel</a>
+      </div>
+
+      <div class="nav__menu" id="nav-menu" style="flex:1;display:flex;justify-content:center">
+        <ul class="nav__list" style="list-style:none;display:flex;gap:12px;margin:0;padding:0">
+          <li class="nav__item"><a href="index.html" class="nav__link" style="color:#0f172a;text-decoration:none;padding:8px 10px;border-radius:6px">Home</a></li>
+          <li class="nav__item"><a href="about.html" class="nav__link" style="color:#0f172a;text-decoration:none;padding:8px 10px;border-radius:6px">About</a></li>
+          <li class="nav__item"><a href="technews.html" class="nav__link" style="color:#0f172a;text-decoration:none;padding:8px 10px;border-radius:6px">Tech</a></li>
+          <li class="nav__item"><a href="sportnews.html" class="nav__link" style="color:#0f172a;text-decoration:none;padding:8px 10px;border-radius:6px">Sports</a></li>
+          <li class="nav__item"><a href="entnews.html" class="nav__link" style="color:#0f172a;text-decoration:none;padding:8px 10px;border-radius:6px">Entertainment</a></li>
+          <li class="nav__item"><a href="civildef_exam.html" class="nav__link" style="color:#0f172a;text-decoration:none;padding:8px 10px;border-radius:6px">CDCFIB EXAMS</a></li>
+        </ul>
+      </div>
+
+      <div class="nav__cta" style="min-width:120px;display:flex;justify-content:flex-end">
+        <a href="animation-registration.html" style="background:#0366d6;color:#fff;padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:600">Register</a>
+      </div>
+    </nav>
+  </header>
+
+  <h1>NSCDC 2025 Exam Practice</h1>
+  <p class="small"> Correct answers will be marked green or red if incorrect. </p>
+
+  <div id="loader" class="small">Loading questions…</div>
+
+  <div id="quiz" class="hidden">
+    <div id="cards" aria-live="polite"></div>
+
+    <div class="meta">
+      <div id="pageInfo" class="small">Page 1</div>
+      <div style="display:flex;gap:8px;align-items:center">
+        <button id="prevBtn" disabled>Previous</button>
+        <button id="nextBtn">Next</button>
+        <button id="submitBtn">Submit</button>
+      </div>
+    </div>
+
+    <div id="result" class="result hidden"></div>
+  </div>
+
+  <script>
+    // Config
+    const PER_PAGE = 4;
+    let questions = [];
+    let page = 0;
+    const userAnswers = {}; // qid -> selectedIndex or text
+
+    // Utilities -------------------------------------------------
+    function el(tag, attrs = {}, children = []){
+      const e = document.createElement(tag);
+      for(const k in attrs){
+        if(k === 'class') e.className = attrs[k];
+        else if(k === 'html') e.innerHTML = attrs[k];
+        else e.setAttribute(k, attrs[k]);
+      }
+      (Array.isArray(children)?children:[children]).forEach(c=>{ if(!c) return; if(typeof c === 'string') e.appendChild(document.createTextNode(c)); else e.appendChild(c); });
+      return e;
+    }
+
+    function showLoader(msg){ document.getElementById('loader').textContent = msg; document.getElementById('loader').classList.remove('hidden'); document.getElementById('quiz').classList.add('hidden'); }
+    function showQuiz(){ document.getElementById('loader').classList.add('hidden'); document.getElementById('quiz').classList.remove('hidden'); }
+
+    function correctIndexFor(q){
+      // prefer numeric keys
+      if(typeof q.correctIndex === 'number') return q.correctIndex;
+      if(typeof q.answerIndex === 'number') return q.answerIndex;
+      if(typeof q.answer === 'string'){
+        const a = q.answer.trim().toUpperCase();
+        if(/^[A-E]$/.test(a)) return a.charCodeAt(0) - 65;
+        if(/^[0-9]+$/.test(a)) return parseInt(a,10)-1; // if '1' => 0
+      }
+      if(typeof q.num === 'string'){
+        const m = q.num.match(/Answer\s*(?:is|:)?\s*([A-E1-5])/i);
+        if(m){ const v = m[1].toUpperCase(); if(/^[A-E]$/.test(v)) return v.charCodeAt(0)-65; if(/^[1-5]$/.test(v)) return parseInt(v,10)-1; }
+      }
+      return null;
+    }
+
+    // Render a page of 4 questions --------------------------------
+    function renderPage(){
+      const start = page * PER_PAGE;
+      const slice = questions.slice(start, start + PER_PAGE);
+      const cards = document.getElementById('cards');
+      cards.innerHTML = '';
+      const grid = el('div', {class:'grid'});
+
+      slice.forEach((q, i)=>{
+        const qIndex = start + i;
+        const qid = q.id !== undefined ? String(q.id) : `q${qIndex}`;
+        const card = el('div', {class:'card'});
+        card.appendChild(el('div',{class:'q-number'}, [`Question ${qIndex+1}`]));
+        card.appendChild(el('div',{class:'q-text'}, [q.text || q.num || 'No question text']));
+
+        const opts = el('div',{class:'opts'});
+        if(Array.isArray(q.options) && q.options.length){
+          q.options.forEach((opt, oi)=>{
+            const inputId = `q_${qid}_opt_${oi}`;
+            const label = el('label', {'data-qid': qid, 'data-index': oi});
+            const input = el('input',{type:'radio',name:`ans_${qid}`,id:inputId,value:oi});
+            input.style.marginRight = '8px';
+            // pre-check if user answered
+            if(userAnswers[qid] !== undefined && userAnswers[qid] === oi) input.checked = true;
+            input.addEventListener('change', ()=>{
+              userAnswers[qid] = oi;
+              // persist to localStorage
+              try{ localStorage.setItem('mock_answers', JSON.stringify(userAnswers)); }catch(e){}
+              // show feedback immediately
+              showFeedback(qid);
+            });
+            label.appendChild(input);
+            label.appendChild(document.createTextNode(' ' + opt));
+            opts.appendChild(label);
+          });
+        } else {
+          const ta = el('textarea',{rows:3,style:'width:100%','aria-label':'Answer'});
+          ta.value = userAnswers[qid] || '';
+          ta.addEventListener('input', ()=>{ userAnswers[qid] = ta.value; try{ localStorage.setItem('mock_answers', JSON.stringify(userAnswers)); }catch(e){} });
+          opts.appendChild(ta);
+        }
+
+        card.appendChild(opts);
+        grid.appendChild(card);
+      });
+
+      cards.appendChild(grid);
+      // update nav
+      document.getElementById('prevBtn').disabled = page === 0;
+      document.getElementById('nextBtn').disabled = (page+1)*PER_PAGE >= questions.length;
+      document.getElementById('pageInfo').textContent = `Page ${page+1} of ${Math.ceil(questions.length/PER_PAGE)}`;
+
+      // show feedback for already answered on this page
+      slice.forEach(q => { const qid = q.id !== undefined ? String(q.id) : null; if(qid && userAnswers[qid] !== undefined) showFeedback(qid); });
+    }
+
+    // show feedback for a specific question id on current page
+    function showFeedback(qid){
+      const q = questions.find(x => String(x.id) === String(qid) || (x.id===undefined && (`q${questions.indexOf(x)}`===qid)) );
+      const correct = q ? correctIndexFor(q) : null;
+      // find labels
+      const labels = Array.from(document.querySelectorAll(`#cards label[data-qid='${qid}']`));
+      labels.forEach(lb => lb.classList.remove('correct','incorrect'));
+      if(correct === null || correct === undefined){
+        // if no answer key, lightly indicate selected as neutral (green)
+        labels.forEach(lb => { if(String(lb.getAttribute('data-index')) === String(userAnswers[qid])) lb.classList.add('correct'); });
+        return;
+      }
+      labels.forEach(lb =>{
+        const idx = parseInt(lb.getAttribute('data-index'),10);
+        if(idx === correct) lb.classList.add('correct');
+        if(userAnswers[qid] !== undefined && parseInt(userAnswers[qid],10) === idx && idx !== correct) lb.classList.add('incorrect');
+      });
+    }
+
+    // compute score using available keys
+    function computeScore(){
+      let totalAuto = 0, correct = 0, attempted = 0;
+      questions.forEach(q=>{
+        const qid = q.id !== undefined ? String(q.id) : null;
+        const key = correctIndexFor(q);
+        const sel = qid ? userAnswers[qid] : undefined;
+        if(sel !== undefined && sel !== null) attempted++;
+        if(key !== null && key !== undefined){ totalAuto++; if(sel === key) correct++; }
+      });
+      return {totalAuto, correct, attempted, total: questions.length};
+    }
+
+    // load questions.json (expects array of {id?,num?,text?,options:[...],answer?/correctIndex?})
+    function loadQuestions(){
+      fetch('questions.json').then(r=>{ if(!r.ok) throw new Error('no json'); return r.json(); }).then(data=>{
+        if(!Array.isArray(data) || data.length===0) throw new Error('empty');
+        questions = data;
+        init();
+      }).catch(()=>{
+        // fallback sample set
+        questions = [
+          {id:'q1', text:'What is the capital of Lagos State?', options:['Ikeja','Lagos Island','Epe','Badagry'], answer:'A'},
+          {id:'q2', text:'What is the meaning of "kick the bucket"?', options:['To give up','To die','To celebrate','To run away'], answer:'B'},
+          {id:'q3', text:'What is 200 divided by 20?', options:['5','10','20','40'], answer:'2'},
+          {id:'q4', text:'What is 254 multiplied by 30?', options:['7,620','762','8,000','6,540'], answer:'1'}
+        ];
+        init();
+      });
+    }
+
+    function init(){
+      // restore saved answers
+      try{ const saved = JSON.parse(localStorage.getItem('mock_answers')||'{}'); Object.assign(userAnswers,saved);}catch(e){}
+      showQuiz();
+      renderPage();
+    }
+
+    // navigation bindings
+    document.addEventListener('click', function(e){
+      if(e.target && e.target.id === 'prevBtn'){ if(page>0){ page--; renderPage(); } }
+      if(e.target && e.target.id === 'nextBtn'){ if((page+1)*PER_PAGE < questions.length){ page++; renderPage(); } }
+      if(e.target && e.target.id === 'submitBtn'){
+        const score = computeScore();
+        const result = document.getElementById('result');
+        if(score.totalAuto>0){ result.innerHTML = `<strong>Score:</strong> ${score.correct} / ${score.totalAuto} (auto-graded).<br><span class="small">Attempted: ${score.attempted} of ${score.total} questions.</span>`; }
+        else { result.innerHTML = `<strong>Done.</strong> ${score.attempted} answered out of ${score.total}. No auto-gradable answers found.`; }
+        result.classList.remove('hidden');
+        // show feedback for current page
+        const start = page*PER_PAGE; questions.slice(start,start+PER_PAGE).forEach(q=>{ const qid = q.id!==undefined ? String(q.id) : null; if(qid) showFeedback(qid); });
+        // persist
+        try{ localStorage.setItem('mock_answers', JSON.stringify(userAnswers)); }catch(e){}
+        result.scrollIntoView({behavior:'smooth',block:'center'});
+      }
+    });
+
+    // start
+    loadQuestions();
+
+    
+    
+  </script>
+</body>
+</html>
