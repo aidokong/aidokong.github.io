@@ -5,6 +5,7 @@
      crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="alternate" type="application/xml" href="/sitemap.xml">
        <!-- Add this inside the <head> section -->
 <meta property="og:title" content="Get Latest Football and Transfer News">
 <meta property="og:description" content="For your latest insight on football news">
@@ -55,6 +56,7 @@
                     <li><a href="index.html" class="footer__link">Home</a></li>
                     <li><a href="about.html" class="footer__link">About</a></li>
                     <li><a href="animation-registration.html" class="footer__link">Animation Registration</a></li>
+                  <li><a href="privacy-policy.html" class="footer__link footer__link--privacy">Privacy Policy</a></li>
                 </ul>
             </div>
             <div class="footer__data">
@@ -63,10 +65,9 @@
                 <a href="https://www.github.com/terryems" class="footer__social" title="GitHub"><i class='bx bxl-github'></i></a>
                 <a href="https://www.linkedin.com/in/terryems" class="footer__social" title="LinkedIn"><i class='bx bxl-linkedin'></i></a>
             </div>
-            <div style="min-width:180px">
+            <div class="footer__ad">
               <!-- manual ad unit -->
               <ins class="adsbygoogle"
-                   style="display:block"
                    data-ad-client="ca-pub-2106993337225854"
                    data-ad-slot="9996782272"
                    data-ad-format="auto"
@@ -91,15 +92,15 @@
         const newsContent = document.getElementById('news-content');
         if (item) {
           newsContent.innerHTML = `
-            <div style="background:#fff;border-radius:16px;box-shadow:0 2px 12px rgba(0,0,0,0.08);padding:2rem;">
-              <img src="${item.image}" alt="${item.title}" style="width:100%;max-width:480px;border-radius:12px;margin-bottom:1rem;">
-              <h2 style="color:#fc575e;margin-bottom:0.5rem;">${item.title}</h2>
-              <p style="margin-bottom:1rem;color:#888;font-size:0.95rem;">${item.date}</p>
-              <div style="margin-bottom:2rem;">${item.content}</div>
-              <div style="display:flex;gap:1rem;justify-content:center;">
-                <a href="https://wa.me/?text=${encodeURIComponent(document.location.href)}" target="_blank" rel="noopener" title="Share on WhatsApp" style="background:#25D366;color:#fff;padding:8px 18px;border-radius:8px;font-weight:bold;text-decoration:none;display:flex;align-items:center;gap:6px;"><i class='bx bxl-whatsapp'></i> WhatsApp</a>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(document.location.href)}" target="_blank" rel="noopener" title="Share on Facebook" style="background:#4267B2;color:#fff;padding:8px 18px;border-radius:8px;font-weight:bold;text-decoration:none;display:flex;align-items:center;gap:6px;"><i class='bx bxl-facebook'></i> Facebook</a>
-                <a href="https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(document.location.href)}" target="_blank" rel="noopener" title="Share on LinkedIn" style="background:#0077b5;color:#fff;padding:8px 18px;border-radius:8px;font-weight:bold;text-decoration:none;display:flex;align-items:center;gap:6px;"><i class='bx bxl-linkedin'></i> LinkedIn</a>
+            <div class="article-card">
+              <img src="${item.image}" alt="${item.title}" class="article-img">
+              <h2 class="article-title">${item.title}</h2>
+              <p class="article-date">${item.date}</p>
+              <div class="article-content">${item.content}</div>
+              <div class="article-share">
+                <a href="https://wa.me/?text=${encodeURIComponent(document.location.href)}" target="_blank" rel="noopener noreferrer" title="Share on WhatsApp" class="share-btn share-btn--whatsapp"><i class='bx bxl-whatsapp'></i> WhatsApp</a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(document.location.href)}" target="_blank" rel="noopener noreferrer" title="Share on Facebook" class="share-btn share-btn--facebook"><i class='bx bxl-facebook'></i> Facebook</a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(document.location.href)}" target="_blank" rel="noopener noreferrer" title="Share on LinkedIn" class="share-btn share-btn--linkedin"><i class='bx bxl-linkedin'></i> LinkedIn</a>
               </div>
                <div style="display:flex;justify-content:space-between;align-items:center;margin-top:2rem;">
                  ${getPrevNextLinks(news, id)}
@@ -113,10 +114,10 @@
           const idx = newsArr.findIndex(n => n.id === currentId);
           let prev = '', next = '';
           if (idx > 0) {
-            prev = `<a href='read.html?id=${newsArr[idx-1].id}' class='news-nav-link' style='background:#eee;color:#fc575e;padding:8px 18px;border-radius:8px;font-weight:bold;text-decoration:none;'>← Previous</a>`;
+            prev = `<a href='read.html?id=${newsArr[idx-1].id}' class='news-nav-link'>← Previous</a>`;
           }
           if (idx < newsArr.length - 1) {
-            next = `<a href='read.html?id=${newsArr[idx+1].id}' class='news-nav-link' style='background:#eee;color:#fc575e;padding:8px 18px;border-radius:8px;font-weight:bold;text-decoration:none;'>Next →</a>`;
+            next = `<a href='read.html?id=${newsArr[idx+1].id}' class='news-nav-link'>Next →</a>`;
           }
           return `${prev}<span></span>${next}`;
         }

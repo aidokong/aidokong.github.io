@@ -6,6 +6,7 @@
      crossorigin="anonymous"></script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="alternate" type="application/xml" href="/sitemap.xml">
 
         <!-- ===== CSS ===== -->
         <link rel="stylesheet" href="assets/css/styles.css">
@@ -37,31 +38,10 @@
                         <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
                         <!-- <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li> -->
                         <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                        <!-- Animation Class Registration Highlight -->
-                        <!-- <li class="nav__item">
-                            <a href="animation-registration.html" class="nav__link" style="color:#fff;background:#ff9800;border-radius:8px;padding:6px 14px;font-weight:bold;box-shadow:0 2px 8px rgba(255,152,0,0.15);margin-left:8px;">
-                                <i class='bx bxs-star' style="vertical-align:middle;margin-right:4px;"></i>
-                                Animation Class
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="python-registration.html" class="nav__link" style="color:#fff;background:#2fff00;border-radius:8px;padding:6px 14px;font-weight:bold;box-shadow:0 2px 8px rgba(255,152,0,0.15);margin-left:8px;">
-                                <i class='bx bxs-star' style="vertical-align:middle;margin-right:4px;"></i>
-                                Python Coding
-                            </a>
-                        </li> -->
+                      
 </main>
 
-<!-- Animation Class Pop-up Modal -->
-<div id="animationClassModal" style="display:none;position:fixed;z-index:9999;left:0;top:0;width:100vw;height:100vh;background:rgba(0,0,0,0.45);justify-content:center;align-items:center;">
-    <div style="background:#fff;border-radius:16px;max-width:340px;width:90%;padding:2rem 1.5rem;box-shadow:0 4px 24px rgba(255,152,0,0.18);text-align:center;position:relative;">
-        <span id="closeAnimationModal" style="position:absolute;top:12px;right:18px;font-size:2rem;cursor:pointer;color:#ff9800;">&times;</span>
-        <img src="assets/img/opentoonz.jpeg" alt="Animation Class" style="width:80px;height:80px;border-radius:50%;margin-bottom:1rem;box-shadow:0 2px 8px rgba(255,152,0,0.12);">
-        <h3 style="color:#ff9800;margin-bottom:0.5rem;">Animation Class Registration!</h3>
-        <p style="margin-bottom:1.2rem;">Join our new animation class and bring your ideas to life. Limited slots available!</p>
-        <a href="animation-registration.html" style="display:inline-block;background:#ff9800;color:#fff;padding:10px 22px;border-radius:8px;font-weight:bold;text-decoration:none;box-shadow:0 2px 8px rgba(255,152,0,0.15);transition:background 0.2s;">Register Now</a>
-    </div>
-</div>
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     let animationModal = document.getElementById('animationClassModal');
@@ -366,14 +346,15 @@ Let’s connect — whether it’s to collaborate, create, or make something mea
                         <li><a href="#skills" class="footer__link">Skills</a></li>
                         <li><a href="#portfolio" class="footer__link">Portfolio</a></li>
                         <li><a href="#contact" class="footer__link">Contact</a></li>
+                        <li><a href="privacy-policy.html" class="footer__link footer__link--privacy">Privacy Policy</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer__data">
                     <h2 class="footer__title">FOLLOW</h2>
-                    <a href="https://www.facebook.com/terryems" class="footer__social"><i class='bx bxl-facebook' ></i></a>
-                    <a href="https://www.github.com/terryems" class="footer__social"><i class='bx bxl-github' ></i></a>
-                    <a href="https://www.linkedin.com/in/terryems" class="footer__social"><i class='bx bxl-linkedin' ></i></a>
+                    <a href="https://www.facebook.com/terryems" class="footer__social" title="Facebook"><i class='bx bxl-facebook' ></i></a>
+                    <a href="https://www.github.com/terryems" class="footer__social" title="GitHub"><i class='bx bxl-github' ></i></a>
+                    <a href="https://www.linkedin.com/in/terryems" class="footer__social" title="LinkedIn"><i class='bx bxl-linkedin' ></i></a>
                 </div>
 
 
@@ -389,7 +370,7 @@ Let’s connect — whether it’s to collaborate, create, or make something mea
         <!-- ...existing code... -->
 
 <!-- WhatsApp Floating Button -->
-<a href="https://wa.me/2347069253361" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+<a href="https://wa.me/2347069253361" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
     <i class='bx bxl-whatsapp'></i>
 </a>
 <script src="assets/js/custom.js"></script>
@@ -468,21 +449,21 @@ const portfolioDetails = [
         title: "Blender Animation",
         img: "assets/img/blender.jpeg",
         desc: `This project showcases my skills in 3D modeling and animation using Blender. I created a short animated film that demonstrates my ability to bring characters and environments to life through detailed modeling, texturing, and rigging.<br><br>
-    <strong>Watch a short Blender animation:</strong><br>
-    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-bottom:1rem;">
-      <iframe src="https://www.youtube.com/embed/mfqQ1b1Uu1k" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
-    </div>
-    <img src="https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif" alt="Blender Animation GIF" style="width:100%;border-radius:6px;margin-top:1rem;">`
+        <strong>Watch a short Blender animation:</strong><br>
+        <div class="embed-responsive">
+            <iframe src="https://www.youtube.com/embed/mfqQ1b1Uu1k" frameborder="0" allowfullscreen class="embed-iframe"></iframe>
+        </div>
+        <img src="https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif" alt="Blender Animation GIF" class="portfolio-img">`
     },
     {
         title: "Opentoonz Animation",
         img: "assets/img/opentoonz.jpeg",
         desc: `This project showcases my skills in 2D animation using Opentoonz. I created a short animated sequence that demonstrates my ability to bring characters and scenes to life through traditional animation techniques.<br><br>
-    <strong>Watch a short Opentoonz animation:</strong><br>
-    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-bottom:1rem;">
-      <iframe src="https://www.youtube.com/embed/2lQ5xw3iCkU" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
-    </div>
-    <img src="https://media.giphy.com/media/3o7TKtnuHOHHUjR38Y/giphy.gif" alt="Opentoonz Animation GIF" style="width:100%;border-radius:6px;margin-top:1rem;">`
+        <strong>Watch a short Opentoonz animation:</strong><br>
+        <div class="embed-responsive">
+            <iframe src="https://www.youtube.com/embed/2lQ5xw3iCkU" frameborder="0" allowfullscreen class="embed-iframe"></iframe>
+        </div>
+        <img src="https://media.giphy.com/media/3o7TKtnuHOHHUjR38Y/giphy.gif" alt="Opentoonz Animation GIF" class="portfolio-img">`
     },
     {
         title: "Dart Mobile App",
@@ -510,7 +491,7 @@ document.querySelectorAll('.portfolio__link-name').forEach(link => {
         const data = portfolioDetails[idx];
         body.innerHTML = `
             <h3>${data.title}</h3>
-            <img src="${data.img}" alt="${data.title}" style="width:100%;border-radius:6px;margin-bottom:1rem;">
+            <img src="${data.img}" alt="${data.title}" class="portfolio-img">
             <p>${data.desc}</p>
         `;
         modal.classList.add('active');

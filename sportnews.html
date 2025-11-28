@@ -5,6 +5,7 @@
      crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="alternate" type="application/xml" href="/sitemap.xml">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="preload" href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/fonts/boxicons.woff2" as="font" type="font/woff2" crossorigin>
@@ -38,7 +39,7 @@
     <main class="l-main">
         <section class="section" id="sports-news-section">
             <h2 class="section-title">Latest Sports News</h2>
-            <div id="news-list" class="bd-grid" style="display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;"></div>
+            <div id="news-list" class="bd-grid news-grid"></div>
         </section>
     </main>
     <footer class="footer section">
@@ -55,6 +56,7 @@
                     <li><a href="technews.html" class="footer__link">Tech News</a></li>
                     <li><a href="sportnews.html" class="footer__link">Sports</a></li>
                     <li><a href="entnews.html" class="footer__link">Entertainment</a></li>
+                    <li><a href="privacy-policy.html" class="footer__link footer__link--privacy">Privacy Policy</a></li>
                 </ul>
             </div>
             <div class="footer__data">
@@ -63,10 +65,9 @@
                 <a href="https://www.github.com/terryems" class="footer__social" title="GitHub"><i class='bx bxl-github'></i></a>
                 <a href="https://www.linkedin.com/in/terryems" class="footer__social" title="LinkedIn"><i class='bx bxl-linkedin'></i></a>
             </div>
-            <div style="min-width:180px">
+            <div class="footer__ad">
                 <!-- manual ad unit -->
                 <ins class="adsbygoogle"
-                     style="display:block"
                      data-ad-client="ca-pub-2106993337225854"
                      data-ad-slot="9996782272"
                      data-ad-format="auto"
@@ -105,7 +106,7 @@
     
     async function loadSportsNews() {
         const newsList = document.getElementById('news-list');
-        newsList.innerHTML = '<div style="text-align:center;padding:2rem;color:#666;">Loading sports news...</div>';
+        newsList.innerHTML = '<div class="loading-center">Loading sports news...</div>';
         
         try {
             // Load local sports news first
@@ -159,7 +160,7 @@
                         title: article.title,
                         image: article.urlToImage || 'assets/img/sports-default.jpg',
                         summary: article.description || 'Latest Sports News',
-                        content: `${article.content || article.description || 'Full article content not available.'}<br><br><strong>Source:</strong> ${article.source.name}<br><strong>Original URL:</strong> <a href="${article.url}" target="_blank" style="color:#ff9800;">${article.url}</a>`,
+                        content: `${article.content || article.description || 'Full article content not available.'}<br><br><strong>Source:</strong> ${article.source.name}<br><strong>Original URL:</strong> <a href="${article.url}" target="_blank" rel="noopener noreferrer" class="external-link">${article.url}</a>`,
                         date: new Date(article.publishedAt).toLocaleDateString(),
                         category: 'sports',
                         source: article.source.name
@@ -191,23 +192,23 @@
             );
             
             if (uniqueNews.length === 0) {
-                newsList.innerHTML = '<p style="text-align:center;color:#666;">No sports news available yet.</p>';
+                    newsList.innerHTML = '<p class="muted-center">No sports news available yet.</p>';
                 return;
             }
             
             newsList.innerHTML = uniqueNews.slice(0, 10).map(item => `
-                <div class="news-card" style="background:#fff;border-radius:16px;box-shadow:0 2px 12px rgba(0,0,0,0.08);padding:1.5rem;margin-bottom:2rem;display:flex;flex-direction:column;align-items:center;max-width:400px;">
-                    <img src="${item.image}" alt="${item.title}" style="width:100%;max-width:320px;height:200px;object-fit:cover;border-radius:12px;margin-bottom:1rem;" onerror="this.src='assets/img/sports-default.jpg'">
-                    <h3 style="color:#fc575e;margin-bottom:0.5rem;font-size:1.1rem;text-align:center;">${item.title}</h3>
-                    <p style="margin-bottom:1rem;text-align:center;color:#666;font-size:0.9rem;">${(item.summary || '').substring(0, 120)}...</p>
-                    <small style="color:#999;margin-bottom:0.5rem;">Source: ${item.source || 'Sports News'}</small>
-                    <a href="read.html?id=${item.id}" class="news-read-link" style="background:#ff9800;color:#fff;padding:8px 18px;border-radius:8px;font-weight:bold;text-decoration:none;margin-top:auto;">Read More</a>
+                <div class="news-card">
+                    <img src="${item.image}" alt="${item.title}" class="news-card__img news-card__img--cover" onerror="this.src='assets/img/sports-default.jpg'">
+                    <h3 class="news-card__title">${item.title}</h3>
+                    <p class="news-card__summary">${(item.summary || '').substring(0, 120)}...</p>
+                    <small class="news-source">Source: ${item.source || 'Sports News'}</small>
+                    <a href="read.html?id=${item.id}" class="news-read-link">Read More</a>
                 </div>
             `).join('');
             
         } catch (error) {
             console.error('Error loading sports news:', error);
-            newsList.innerHTML = '<p style="text-align:center;color:#f44;">Error loading sports news. Please try again later.</p>';
+            newsList.innerHTML = '<p class="error-center">Error loading sports news. Please try again later.</p>';
         }
     }
     
@@ -218,21 +219,21 @@
         const sportsNews = news.filter(item => item.category === 'sports');
         const newsList = document.getElementById('news-list');
         if (sportsNews.length === 0) {
-          newsList.innerHTML = '<p style="text-align:center;color:#666;">No sports news available yet.</p>';
+          newsList.innerHTML = '<p class="muted-center">No sports news available yet.</p>';
         } else {
-          newsList.innerHTML = sportsNews.map(item => `
-            <div class="news-card" style="background:#fff;border-radius:16px;box-shadow:0 2px 12px rgba(0,0,0,0.08);padding:1.5rem;margin-bottom:2rem;display:flex;flex-direction:column;align-items:center;max-width:400px;">
-              <img src="${item.image}" alt="${item.title}" style="width:100%;max-width:320px;border-radius:12px;margin-bottom:1rem;">
-              <h3 style="color:#fc575e;margin-bottom:0.5rem;">${item.title}</h3>
-              <p style="margin-bottom:1rem;">${item.summary}</p>
-              <a href="read.html?id=${item.id}" class="news-read-link" style="background:#ff9800;color:#fff;padding:8px 18px;border-radius:8px;font-weight:bold;text-decoration:none;">Read More</a>
-            </div>
-          `).join('');
+                    newsList.innerHTML = sportsNews.map(item => `
+                        <div class="news-card">
+                            <img src="${item.image}" alt="${item.title}" class="news-card__img">
+                            <h3 class="news-card__title">${item.title}</h3>
+                            <p class="news-card__summary">${item.summary}</p>
+                            <a href="read.html?id=${item.id}" class="news-read-link">Read More</a>
+                        </div>
+                    `).join('');
         }
       })
       .catch(error => {
         console.error('Error loading news:', error);
-        document.getElementById('news-list').innerHTML = '<p style="text-align:center;color:#666;">Error loading sports news.</p>';
+        document.getElementById('news-list').innerHTML = '<p class="muted-center">Error loading sports news.</p>';
       });
     </script>
 </body>
