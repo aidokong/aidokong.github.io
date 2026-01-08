@@ -1,0 +1,253 @@
+/* ...existing code... */
+
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 2.5rem;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+.whatsapp-float:hover {
+    background-color: #128c7e;
+}
+
+
+
+/* CV Floating Button */
+.cv-float-btn {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    background: #5361FF;
+    color: #fff;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    z-index: 1001;
+    cursor: pointer;
+    transition: background 0.3s;
+    padding: 0 24px;
+    height: 48px;
+    min-width: 140px;
+    gap: 10px;
+}
+.cv-float-btn:hover {
+    background: #303998;
+}
+.cv-float-text {
+    margin-left: 6px;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+/* CV Sliding Panel */
+.cv-slide-panel {
+    position: fixed;
+    bottom: 100px;
+    right: -340px;
+    width: 320px;
+    background: rgba(255,255,255,0.95);
+    box-shadow: 0 8px 32px rgba(60,60,60,0.25);
+    border-radius: 18px 0 0 18px;
+    padding: 28px 24px 18px 24px;
+    z-index: 1002;
+    transition: right 0.4s cubic-bezier(.77,0,.18,1);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(40,200,120,0.10);
+}
+.cv-slide-panel.active {
+    right: 30px;
+}
+.cv-slide-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+    color: #222;
+    letter-spacing: 1px;
+}
+.cv-slide-close {
+    cursor: pointer;
+    font-size: 2rem;
+    color: #253fd3;
+    transition: color 0.2s;
+    margin-left: 10px;
+}
+.cv-slide-close:hover {
+    color: #122a8c;
+}
+.cv-slide-link {
+    background: linear-gradient(90deg, #253cd3 60%, #14128c 100%);
+    color: #fff;
+    padding: 12px 0;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+    box-shadow: 0 2px 8px rgba(60,60,60,0.08);
+    transition: background 0.3s, transform 0.2s;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+.cv-slide-link:hover {
+    background: linear-gradient(90deg, #253cd3 60%, #14128c 100%);
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 4px 16px rgba(60,60,60,0.12);
+}.cv-float-btn,
+.cv-slide-panel,
+.cv-overlay {
+    transition: opacity 0.3s, visibility 0.3s;
+}
+.cv-hide {
+    opacity: 0 !important;
+    pointer-events: none !important;
+    visibility: hidden !important;
+}
+.read-more-btn{
+    display: inline-block;
+    background-color: #5361FF;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+.backg{
+    background: url('../../back.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Footer / Ad utility styles added to replace inline styles */
+.footer__ad{
+    min-width: 180px;
+}
+.footer--alt{
+    margin-top: 36px;
+    padding: 18px 16px;
+    border-top: 1px solid #e6eef6;
+    background: #fbfdff;
+}
+.footer__container--compact{
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+.footer__copyright{
+    color: #334155;
+}
+.footer__link--privacy{
+    color: #0366d6;
+    text-decoration: none;
+}
+
+/* Ensure AdSense ins blocks are displayed when inside footer ad containers */
+.footer__ad ins.adsbygoogle {
+    display: block;
+}
+
+/* News / Article card styles to replace inline styles */
+.news-card{
+    background:#fff;
+    border-radius:16px;
+    box-shadow:0 2px 12px rgba(0,0,0,0.08);
+    padding:1.5rem;
+    margin-bottom:2rem;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    max-width:400px;
+}
+.news-card__img{
+    width:100%;
+    max-width:320px;
+    border-radius:12px;
+    margin-bottom:1rem;
+}
+.news-card__img--cover{
+    height:200px;
+    object-fit:cover;
+}
+.news-card__title{
+    color:#fc575e;
+    margin-bottom:0.5rem;
+    text-align:center;
+    font-size:1.1rem;
+}
+.news-card__summary{
+    margin-bottom:1rem;
+    text-align:center;
+}
+.news-read-link{
+    background:#ff9800;
+    color:#fff;
+    padding:8px 18px;
+    border-radius:8px;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+.article-card{
+    background:#fff;
+    border-radius:16px;
+    box-shadow:0 2px 12px rgba(0,0,0,0.08);
+    padding:2rem;
+}
+.article-img{
+    width:100%;
+    max-width:480px;
+    border-radius:12px;
+    margin-bottom:1rem;
+}
+.article-title{color:#fc575e;margin-bottom:0.5rem}
+.article-date{margin-bottom:1rem;color:#888;font-size:0.95rem}
+
+.share-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 18px;border-radius:8px;font-weight:bold;color:#fff;text-decoration:none}
+.share-btn--whatsapp{background:#25D366}
+.share-btn--facebook{background:#4267B2}
+.share-btn--linkedin{background:#0077b5}
+
+.news-nav-link{background:#eee;color:#fc575e;padding:8px 18px;border-radius:8px;font-weight:bold;text-decoration:none}
+
+.external-link{color:#ff9800}
+
+.article-share{display:flex;gap:1rem;justify-content:center}
+
+/* Utility classes for embed and portfolio */
+.embed-responsive{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-bottom:1rem}
+.embed-iframe{position:absolute;top:0;left:0;width:100%;height:100%}
+.portfolio-img{width:100%;border-radius:6px;margin-top:1rem}
+
+.news-source{color:#999;margin-bottom:0.5rem;display:block}
+.muted-center{text-align:center;color:#666}
+.error-center{text-align:center;color:#f44}
+
+/* News list grid helper to replace inline flex styles */
+.news-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:2rem}
+.loading-center{text-align:center;color:#666;padding:2rem}
+

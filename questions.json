@@ -1,0 +1,430 @@
+[
+  {
+    "id": 1,
+    "num": "WhatsApp:07080230649\nwww.exampastquestions.ng\n\nNIGERIASECURITYANDCIVILDEFENCECORPS\n(NSCDC)\nRECRUITMENTEXAM/APTITUDETEST\nPASTQUESTIONSANDANSWERSBOOK\n(Forup-comingexampreparation)\nNote:Onlythosethatscorehighermarkswillbeselected\nTHENIGERIASECURITYANDCIVILDEFENCECORPSRECRUITMENT\nEXAMISDIVIDEDINTOTHREESECTIONS,WHICHARE;\nGENERALSTUDIESANDCURRENTAFFAIRS--------\nGENERALMATHEMATICS---------------\nENGLISHLANGUAGE--------\nGeneralstudiesandcurrentaffairspart:",
+    "text": "What is the capital of Nigeria?",
+    "options": ["Lagos","Kano","Abuja","Port Harcourt"],
+    "correctIndex": 2
+  },
+  {
+    "id": 2,
+    "num": "The Nigeria Security and Civil Defence Corps was first introduced in which year?\na. May 1979\nb. June 1979\nc. May 1967\nd. June 1967\nAnswer is C",
+    "text": "The Nigeria Security and Civil Defence Corps was first introduced in which year?",
+    "options": ["May 1979", "June 1979", "May 1967", "June 1967"],
+    "correctIndex": 2
+  },
+  {
+    "id": 3,
+    "num": "What inspired the introduction of the NSCDC?\na. The Lagos Market Women Protest.\nb. The Nigeria Civil War.\nc. The Aba Market Women Riot.\nd. Civil Unrest across the Country.\nAnswer is B",
+    "text": "What inspired the introduction of the NSCDC?",
+    "options": ["The Lagos Market Women Protest.", "The Nigeria Civil War.", "The Aba Market Women Riot.", "Civil Unrest across the Country."],
+    "correctIndex": 1
+  },
+  {
+    "id": 4,
+    "num": "During the Nigeria Civil War that commenced in 1967 in the capital territory of Lagos, what was the Nigerian Security and Civil Defense Corps known as?\na. Lagos Civil Security Commission.\nb. Lagos Security and Community Defense Corps.\nc. Lagos Civil Defense Committee.\nd. Lagos Security and Defense Corporation.\nAnswer is C",
+    "text": "During the Nigeria Civil War that commenced in 1967 in the capital territory of Lagos, what was the Nigerian Security and Civil Defense Corps known as?",
+    "options": ["Lagos Civil Security Commission.", "Lagos Security and Community Defense Corps.", "Lagos Civil Defense Committee.", "Lagos Security and Defense Corporation."],
+    "correctIndex": 2
+  },
+  {
+    "id": 5,
+    "num": "What was the NSCDC’s initial core objective(s)?\na. To sensitize and protect the Civil Populace.\nb. To maintain law and order in the Civil Society.\nc. To foster the movement of people around.\nd. To encourage the Civil Society to be peaceful.\nAnswer is A",
+    "text": "What was the NSCDC’s initial core objective(s)?",
+    "options": ["To sensitize and protect the Civil Populace.", "To maintain law and order in the Civil Society.", "To foster the movement of people around.", "To encourage the Civil Society to be peaceful."],
+    "correctIndex": 0
+  },
+  {
+    "id": 6,
+    "num": "Civil Defense",
+    "text": "In what year did the former Lagos Civil Defense Committee become officially known as the Nigeria Security and Civil Defense Corps (NSCDC)?",
+    "options": ["1980", "1970", "1960", "1990"],
+    "correctIndex": 1
+  },
+  {
+    "id": 7,
+    "num": "English Idioms",
+    "text": "What does the expression 'bend over backwards' mean?",
+    "options": ["Sleep over", "Refuse to help", "Try very hard to help", "Complain"],
+    "correctIndex": 2
+  },
+  {
+    "id": 8,
+    "num": "\u221A144 is\nA) 11\nB) 13\nC) 146\nD) 12\nE) 244\nAnswer is D",
+    "text": "\u221A144 is (which of the following?)",
+    "options": ["11", "13", "146", "12", "244"],
+    "correctIndex": 3
+  },
+  {
+    "id": 9,
+    "num": "Consider the sequence 2, 6, 18, 54, 162, … If the 48th term is A and the 51st is B, what is the value of B / A?\nA) 1/27\nB) 1/3\nC) 9\nD) 3\nE) 27\nAnswer is E",
+    "text": "Consider the sequence 2, 6, 18, 54, 162, … If the 48th term is A and the 51st is B, what is the value of B / A?",
+    "options": ["1/27", "1/3", "9", "3", "27"],
+    "correctIndex": 4
+  },
+  {
+    "id": 10,
+    "num": "Lastnight,IheardaPeculiarstoryabouttheactivitiesofghost.\na.Trueb.Specialc.Shortd.Falsee.Strange\nAnswerisE",
+    "text": "What year did the NSCDC become a National Security Outfit?",
+    "options": ["1960,", "1984", "1988", "1994"],
+    "correctIndex": 2
+  },
+
+  {
+    "id": 1,
+    "num": "Commerce",
+    "text": "A trader bought an item for ₦2000 and sold it for ₦2700. What is the profit?",
+    "options": ["₦600", "₦750", "₦700", "₦800"],
+    "correctIndex": 2
+  },
+  {
+    "id": 2,
+    "num": "English Idioms",
+    "text": "What does the expression 'bend over backwards' mean?",
+    "options": ["Sleep over", "Refuse to help", "Try very hard to help", "Complain"],
+    "correctIndex": 2
+  },
+  {
+    "id": 3,
+    "num": "English Idioms",
+    "text": "What does the expression 'bite the bullet' mean?",
+    "options": ["Refuse to act", "Eat quickly", "Complain loudly", "Face a difficult situation bravely"],
+    "correctIndex": 3
+  },
+  {
+    "id": 4,
+    "num": "English Idioms",
+    "text": "What does the expression 'spill the beans' mean?",
+    "options": ["Keep a secret", "Reveal secret information", "Cook dinner", "Tell a joke"],
+    "correctIndex": 1
+  },
+  {
+    "id": 5,
+    "num": "English Idioms",
+    "text": "What does the expression 'barking up the wrong tree' mean?",
+    "options": ["Climbing a tree", "Praising someone", "Accusing the wrong person", "Looking for fruit"],
+    "correctIndex": 2
+  },
+  {
+    "id": 6,
+    "num": "Math",
+    "text": "A car travels at 70 km/h for 2 hours. How far does it go?",
+    "options": ["140 km", "70 km", "160 km", "210 km"],
+    "correctIndex": 0
+  },
+  {
+    "id": 7,
+    "num": "English Idioms",
+    "text": "What does the expression 'break the ice' mean?",
+    "options": ["Fall on ice", "Stop an argument", "Start a friendly conversation", "Drink cold water"],
+    "correctIndex": 2
+  },
+  {
+    "id": 8,
+    "num": "Math",
+    "text": "If one item costs ₦700, what is the cost of 6 items?",
+    "options": ["₦4250", "₦4275", "₦4200", "₦4100"],
+    "correctIndex": 2
+  },
+  {
+    "id": 9,
+    "num": "English Idioms",
+    "text": "What does the expression 'hit the sack' mean?",
+    "options": ["Go to work", "Cook dinner", "Watch a match", "Go to bed"],
+    "correctIndex": 3
+  },
+  {
+    "id": 10,
+    "num": "English Idioms",
+    "text": "What does the expression 'face the music' mean?",
+    "options": ["Sing a song", "Throw a party", "Listen to radio", "Accept consequences"],
+    "correctIndex": 3
+  },
+  {
+    "id": 11,
+    "num": "Math",
+    "text": "If one item costs ₦700, what is the cost of 9 items?",
+    "options": ["₦6300", "₦6450", "₦6325", "₦6250"],
+    "correctIndex": 0
+  },
+  {
+    "id": 12,
+    "num": "Commerce",
+    "text": "A trader bought an item for ₦4000 and sold it for ₦4400. What is the profit?",
+    "options": ["₦400", "₦500", "₦300", "₦600"],
+    "correctIndex": 0
+  },
+  {
+    "id": 13,
+    "num": "Math",
+    "text": "Subtract 132 from 378.",
+    "options": ["241", "256", "251"],
+    "correctIndex": null
+  },
+  {
+    "id": 14,
+    "num": "Civic Education",
+    "text": "What is the main function of CDCFIB?",
+    "options": ["Recruitment for paramilitary services", "Building roads", "University admissions", "State taxation"],
+    "correctIndex": 0
+  },
+  {
+    "id": 15,
+    "num": "Math",
+    "text": "A car travels at 30 km/h for 2 hours. How far does it go?",
+    "options": ["80 km", "90 km", "60 km", "30 km"],
+    "correctIndex": 2
+  },
+  {
+    "id": 16,
+    "num": "English Idioms",
+    "text": "What does the expression 'burn the midnight oil' mean?",
+    "options": ["Work late into the night", "Watch TV", "Waste fuel", "Sleep early"],
+    "correctIndex": 0
+  },
+  {
+    "id": 17,
+    "num": "Math",
+    "text": "If one item costs ₦700, what is the cost of 7 items?",
+    "options": ["₦5050", "₦4800", "₦4900"],
+    "correctIndex": 2
+  },
+  {
+    "id": 18,
+    "num": "English Idioms",
+    "text": "What does the expression 'drop the ball' mean?",
+    "options": ["Make a mistake", "Start fast", "Play fairly", "Win a game"],
+    "correctIndex": 0
+  },
+  {
+    "id": 19,
+    "num": "Math",
+    "text": "Divide 210 by 10.",
+    "options": ["20", "21", "23", "22"],
+    "correctIndex": 1
+  },
+  {
+    "id": 20,
+    "num": "Civic Education",
+    "text": "What is the main function of Federal Road Safety Corps (FRSC)?",
+    "options": ["Road safety and traffic management", "Electricity regulation", "Border patrol", "Customs revenue collection"],
+    "correctIndex": 0
+  },
+  {
+    "id": 21,
+    "num": "English Idioms",
+    "text": "What does the expression 'cost an arm and a leg' mean?",
+    "options": ["Be very expensive", "Be very cheap", "Be free", "Be on discount"],
+    "correctIndex": 0
+  },
+  {
+    "id": 22,
+    "num": "English Idioms",
+    "text": "What does the expression 'go the extra mile' mean?",
+    "options": ["Travel farther", "Spend more money", "Work shorter hours", "Make extra effort"],
+    "correctIndex": 3
+  },
+  {
+    "id": 23,
+    "num": "Civic Education",
+    "text": "What is the main function of Nigeria Police Force (NPF)?",
+    "options": ["National budgeting", "Traffic control", "Maintaining law and order"],
+    "correctIndex": 2
+  },
+  {
+    "id": 24,
+    "num": "Math",
+    "text": "1/5 of 60",
+    "options": ["10", "12", "15", "20"],
+    "correctIndex": 1
+  },
+  {
+    "id": 25,
+    "num": "Math",
+    "text": "A car travels at 30 km/h for 4 hours. How far does it go?",
+    "options": ["150 km", "90 km", "140 km", "120 km"],
+    "correctIndex": 3
+  },
+  {
+    "id": 26,
+    "num": "Civic Education",
+    "text": "What is the main function of Customs Service?",
+    "options": ["Healthcare service", "Immigration visas", "Telecom licensing", "Customs duties collection and anti-smuggling"],
+    "correctIndex": 3
+  },
+  {
+    "id": 27,
+    "num": "Civic Education",
+    "text": "The colours of the Nigerian flag are _____",
+    "options": ["Green and red", "White and blue", "Green white green and blue", "Green and white"],
+    "correctIndex": 3
+  },
+  {
+    "id": 31,
+    "num": "Math",
+    "text": "If an item costs ₦500, what is the cost of 3 items?",
+    "options": ["₦1500", "₦400", "₦1650", "₦1525"],
+    "correctIndex": 0
+  },
+  {
+    "id": 32,
+    "num": "Math",
+    "text": "Subtract 138 from 681.",
+    "options": ["538", "543", "553", "548"],
+    "correctIndex": 1
+  },
+  {
+    "id": 33,
+    "num": "Math",
+    "text": "A car travels at 50 km/h for 5 hours. How far does it go?",
+    "options": ["200 km", "250 km", "300 km", "270 km"],
+    "correctIndex": 1
+  },
+  {
+    "id": 34,
+    "num": "Vocabulary",
+    "text": "Choose the synonym of 'content'",
+    "options": ["jealous", "angry", "hungry", "satisfied"],
+    "correctIndex": 3
+  },
+  {
+    "id": 35,
+    "num": "Civic Education",
+    "text": "What is the main duty of FRSC?",
+    "options": ["conducting elections", "passport issuance", "road safety and traffic management"],
+    "correctIndex": 2
+  },
+  {
+    "id": 36,
+    "num": "Civic Education",
+    "text": "Which body conducts federal elections in Nigeria?",
+    "options": ["EFCC", "Independent National Electoral Commission (INEC)", "CBN"],
+    "correctIndex": 1
+  },
+  {
+    "id": 37,
+    "num": "General Knowledge",
+    "text": "The seat of the Nigerian President is —",
+    "options": ["Aso Villa", "Defence Headquarters", "Eagle Square", "National Assembly Complex"],
+    "correctIndex": 0
+  },
+  {
+    "id": 38,
+    "num": "Math",
+    "text": "If one item costs ₦200, what is the cost of 6 items?",
+    "options": ["₦550", "₦1250", "₦1200", "₦1300"],
+    "correctIndex": 2
+  },
+  {
+    "id": 39,
+    "num": "Math",
+    "text": "If one item costs ₦450, what is the cost of 3 items?",
+    "options": ["₦1300", "₦1375", "₦1450", "₦1350"],
+    "correctIndex": 3
+  },
+  {
+    "id": 40,
+    "num": "Vocabulary",
+    "text": "What is the synonym of 'diligent'?",
+    "options": ["hardworking", "lazy", "careless", "excited"],
+    "correctIndex": 0
+  },
+  {
+    "id": 41,
+    "num": "Geography",
+    "text": "Which ocean borders Nigeria to the south?",
+    "options": ["Pacific Ocean", "Indian Ocean", "Atlantic Ocean"],
+    "correctIndex": 2
+  },
+  {
+    "id": 42,
+    "num": "Grammar",
+    "text": "He divided the mango — two.",
+    "options": ["among", "between", "in", "into"],
+    "correctIndex": 1
+  },
+  {
+    "id": 43,
+    "num": "Commerce",
+    "text": "A trader bought an item for ₦1200 and sold it for ₦1400. What is the profit?",
+    "options": ["₦200", "₦100", "₦300", "₦400"],
+    "correctIndex": 0
+  },
+  {
+    "id": 44,
+    "num": "Vocabulary",
+    "text": "Choose the synonym of 'innovative'",
+    "options": ["boring", "rigid", "stale", "creative"],
+    "correctIndex": 3
+  },
+  {
+    "id": 45,
+    "num": "Math",
+    "text": "If one item costs ₦700, what is the cost of 5 items?",
+    "options": ["₦3600", "₦4900", "₦3500", "₦3526"],
+    "correctIndex": 2
+  },
+  {
+    "id": 46,
+    "num": "Grammar",
+    "text": "The bank is ___ the left.",
+    "options": ["at", "in", "on", "to"],
+    "correctIndex": 2
+  },
+  {
+    "id": 47,
+    "num": "Grammar",
+    "text": "She travelled ___ flight.",
+    "options": ["by", "in", "with", "on"],
+    "correctIndex": 0
+  },
+  {
+    "id": 48,
+    "num": "Geography",
+    "text": "The capital of FCT State is ___",
+    "options": ["Abuja", "Asaba", "Bauchi", "Yola"],
+    "correctIndex": 0
+  },
+  {
+    "id": 49,
+    "num": "Vocabulary",
+    "text": "Choose the synonym of 'ban'",
+    "options": ["prohibit", "promote", "allow"],
+    "correctIndex": 0
+  },
+  {
+    "id": 50,
+    "num": "Math",
+    "text": "Multiply 15 × 7.",
+    "options": ["98", "120", "105", "115"],
+    "correctIndex": 2
+  },
+  {
+    "id": 51,
+    "num": "Geography",
+    "text": "Which river joins River Niger at Lokoja?",
+    "options": ["River Benue", "Ogun River", "Osun River", "Cross River"],
+    "correctIndex": 0
+  },
+  {
+    "id": 52,
+    "num": "Math",
+    "text": "What is 3/5 of 120?",
+    "options": ["92", "62", "82", "72"],
+    "correctIndex": 3
+  },
+  {
+    "id": 53,
+    "num": "Math",
+    "text": "Subtract 281 from 305.",
+    "options": ["28", "29", "23", "24"],
+    "correctIndex": 3
+  },
+  {
+    "id": 54,
+    "num": "Vocabulary",
+    "text": "Choose the synonym of 'little'.",
+    "options": ["huge", "large", "scanty"],
+    "correctIndex": 2
+  }
+]
