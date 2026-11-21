@@ -6,6 +6,8 @@
      crossorigin="anonymous"></script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Meet Aidoko Emmanuel, a software engineer, web developer, data analyst, designer, and animator building useful digital and educational projects.">
+        <link rel="canonical" href="https://aidoko.name.ng/">
         <link rel="alternate" type="application/xml" href="/sitemap.xml">
 
         <!-- ===== CSS ===== -->
@@ -38,54 +40,6 @@
                         <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
                         <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                         <li class="nav__item"><a href="news.html" class="nav__link">News</a></li>
-                      
-</main>
-
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    let animationModal = document.getElementById('animationClassModal');
-    let pythonModal = document.getElementById('pythonClassModal');
-    let animationTimeout, pythonTimeout, repeatTimeout;
-
-    function showAnimationModal() {
-        animationModal.style.display = 'flex';
-    }
-    function showPythonModal() {
-        pythonModal.style.display = 'flex';
-    }
-    function hideAnimationModal() {
-        animationModal.style.display = 'none';
-        // Show python modal after 5 seconds
-        pythonTimeout = setTimeout(showPythonModal, 5000);
-    }
-    function hidePythonModal() {
-        pythonModal.style.display = 'none';
-        // Repeat the process after 1 minute
-        repeatTimeout = setTimeout(startModals, 60000);
-    }
-
-    function startModals() {
-        showAnimationModal();
-    }
-
-    // Initial start after 3 seconds
-    animationTimeout = setTimeout(startModals, 3000);
-
-    document.getElementById('closeAnimationModal').onclick = function() {
-        hideAnimationModal();
-    };
-    animationModal.onclick = function(e) {
-        if (e.target === animationModal) hideAnimationModal();
-    };
-    document.getElementById('closePythonModal').onclick = function() {
-        hidePythonModal();
-    };
-    pythonModal.onclick = function(e) {
-        if (e.target === pythonModal) hidePythonModal();
-    };
-});
-</script>
                     </ul>
                 </div>
 
@@ -121,12 +75,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
     <div class="cv-slide-panel" id="cvSlidePanel">
         <div class="cv-slide-header">
-            <span>Download CV</span>
+            <span>View or Download CV</span>
             <span class="cv-slide-close" id="cvSlideClose">&times;</span>
         </div>
-        <a href="assets/files/software-engineer-cv.pdf" class="cv-slide-link" download>Software Engineer CV</a>
-        <a href="assets/files/animator-cv.pdf" class="cv-slide-link cv-link-disabled" tabindex="-1" aria-disabled="true" style="pointer-events: none; opacity: 0.5;">Animator CV</a>
-        <a href="assets/files/climate-change-cv.pdf" class="cv-slide-link cv-link-disabled" tabindex="-1" aria-disabled="true" style="pointer-events: none; opacity: 0.5;">Climate Change CV</a>
+        <a href="assets/files/software-engineer-cv.pdf" class="cv-slide-link" target="_blank" rel="noopener noreferrer">View CV</a>
+        <a href="assets/files/software-engineer-cv.pdf" class="cv-slide-link" download="software-engineer-cv.pdf">Download CV</a>
+    </div>
+
+    <div class="cv-preview-modal" id="cvPreviewModal" aria-hidden="true">
+        <div class="cv-preview-dialog" role="dialog" aria-modal="true" aria-labelledby="cvPreviewTitle">
+            <div class="cv-preview-header">
+                <h2 id="cvPreviewTitle">View CV</h2>
+                <button class="cv-preview-close" id="cvPreviewClose" type="button" aria-label="Close CV preview">&times;</button>
+            </div>
+            <iframe class="cv-preview-frame" id="cvPreviewFrame" title="CV preview"></iframe>
+        </div>
     </div>
                 
 
@@ -138,6 +101,10 @@ const cvBtn = document.getElementById('cvFloatBtn');
 const cvPanel = document.getElementById('cvSlidePanel');
 const cvClose = document.getElementById('cvSlideClose');
 const cvOverlay = document.getElementById('cvOverlay');
+const cvViewLink = document.querySelector('#cvSlidePanel a[target="_blank"]');
+const cvPreviewModal = document.getElementById('cvPreviewModal');
+const cvPreviewFrame = document.getElementById('cvPreviewFrame');
+const cvPreviewClose = document.getElementById('cvPreviewClose');
 const homeSection = document.getElementById('home');
 
 // Show/hide CV button and panel based on scroll
@@ -174,6 +141,28 @@ cvOverlay.onclick = function() {
     cvPanel.classList.remove('active');
     cvOverlay.classList.remove('active');
 };
+cvViewLink.addEventListener('click', function(event) {
+    event.preventDefault();
+    cvPreviewFrame.src = cvViewLink.href;
+    cvPreviewModal.classList.add('active');
+    cvPreviewModal.setAttribute('aria-hidden', 'false');
+    cvPanel.classList.remove('active');
+    cvOverlay.classList.remove('active');
+    cvPreviewClose.focus();
+});
+function closeCVPreview() {
+    cvPreviewModal.classList.remove('active');
+    cvPreviewModal.setAttribute('aria-hidden', 'true');
+    cvPreviewFrame.src = '';
+    cvBtn.focus();
+}
+cvPreviewClose.addEventListener('click', closeCVPreview);
+cvPreviewModal.addEventListener('click', function(event) {
+    if (event.target === cvPreviewModal) closeCVPreview();
+});
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape' && cvPreviewModal.classList.contains('active')) closeCVPreview();
+});
 </script>
             
             <!--===== ABOUT =====-->
@@ -215,34 +204,55 @@ Let’s connect — whether it’s to collaborate, create, or make something mea
 
             <!--===== SKILLS =====-->
             <section class="skills section" id="skills">
-                <h2 class="section-title">Skills</h2>
+                <h2 class="section-title">My Work</h2>
 
-                <div class="skills__container bd-grid">
-                    <div class="skills__box">
-                        <h3 class="skills__subtitle">Software Engineer</h3>
-                        <span class="skills__name">Python</span>
-                        <span class="skills__name">Dart</span>
-                        <span class="skills__name">Javascript</span>
-                        <!-- <span class="skills__name"></span> -->
-                        <span class="skills__name">SQL</span>
-                        <span class="skills__name">Golan</span>
-                        
-                        <h3 class="skills__subtitle">Development</h3>
-                        <span class="skills__name">HTML5</span>
-                        <span class="skills__name">React JS</span>
-                        <span class="skills__name">Javascript</span>
-                        <span class="skills__name">Advanced CSS</span>
+                <div class="work-grid bd-grid">
+                    <article class="work-card">
+                        <div class="work-card__visual work-card__visual--poster">
+                            <img src="assets/img/python.png" alt="Python Programming Class poster">
+                        </div>
+                        <div class="work-card__body">
+                            <h3>Python Programming Class</h3>
+                            <p>Practical programming lessons and beginner-friendly learning resources.</p>
+                            <div class="work-card__tags"><span>Python</span><span>Education</span></div>
+                        </div>
+                    </article>
 
-                        <h3 class="skills__subtitle">Design / Animation</h3>
-                        <!-- <span class="skills__name">Figma</span> -->
-                        <span class="skills__name">Corel Draw</span>
-                        <span class="skills__name">Blender</span>
-                        <span class="skills__name">Opentoonz</span>
-                    </div>
+                    <article class="work-card">
+                        <div class="work-card__visual work-card__visual--web" aria-hidden="true"><span class="work-card__visual-label">WEB<br>DEVELOPMENT</span></div>
+                        <div class="work-card__body">
+                            <h3>Web Development</h3>
+                            <p>Responsive websites and useful web applications built around real needs.</p>
+                            <div class="work-card__tags"><span>HTML/CSS</span><span>JavaScript</span><span>React</span></div>
+                        </div>
+                    </article>
 
-                    <div class="skills__img">
-                        <img src="assets/img/skills.png" alt="">
-                    </div>
+                    <article class="work-card">
+                        <div class="work-card__visual work-card__visual--climate" aria-hidden="true"><span class="work-card__visual-label">CLIMATE<br>STORIES</span></div>
+                        <div class="work-card__body">
+                            <h3>Climate Awareness</h3>
+                            <p>Stories, comics, and animation that make environmental topics accessible to young people.</p>
+                            <div class="work-card__tags"><span>Storytelling</span><span>Education</span></div>
+                        </div>
+                    </article>
+
+                    <article class="work-card">
+                        <div class="work-card__visual work-card__visual--animation" aria-hidden="true"><span class="work-card__visual-label">MOTION<br>&amp; DESIGN</span></div>
+                        <div class="work-card__body">
+                            <h3>Animation &amp; Graphics</h3>
+                            <p>Visual design and animation for digital stories and community projects.</p>
+                            <div class="work-card__tags"><span>Blender</span><span>OpenToonz</span><span>CorelDRAW</span></div>
+                        </div>
+                    </article>
+
+                    <article class="work-card">
+                        <div class="work-card__visual work-card__visual--data" aria-hidden="true"><span class="work-card__visual-label">DATA<br>TOOLS</span></div>
+                        <div class="work-card__body">
+                            <h3>Data-Driven Tools</h3>
+                            <p>Small software and data projects that turn information into practical insights.</p>
+                            <div class="work-card__tags"><span>Python</span><span>SQL</span></div>
+                        </div>
+                    </article>
                 </div>
             </section>
 
@@ -373,7 +383,6 @@ Let’s connect — whether it’s to collaborate, create, or make something mea
 <a href="https://wa.me/2347069253361" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
     <i class='bx bxl-whatsapp'></i>
 </a>
-<script src="assets/js/custom.js"></script>
 <script>
   var form = document.getElementById("my-form");
   
